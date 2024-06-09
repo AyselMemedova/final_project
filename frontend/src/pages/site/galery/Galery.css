@@ -1,0 +1,209 @@
+.galery_ust {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 230px;
+    background-color: rgb(201, 216, 191);
+    font-family: "Caudex";
+
+
+
+    .galery {
+        text-align: center;
+        font-size: 42px;
+        font-family: "Caudex";
+        color: rgb(29, 59, 42);
+    }
+
+    p {
+        color: rgb(29, 59, 42);
+        text-align: center;
+        font-size: 32px;
+        width: 543px;
+        height: 41px;
+        font-weight: 200;
+    }
+
+}
+
+.ilk_teref_bir {
+    background-image: url("https://images01.nicepagecdn.com/1f/98/1f988200c3d4e0e963a522020f8dc664.jpeg");
+    width: 360px;
+    height: 430px;
+    margin: 15px;
+    min-height: 461px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+
+.ilk_teref_bir::before,
+.ilk_teref_iki::before,
+.ucuncu_teref_iki::before,
+.ucuncu_teref_bir::before {
+    content: " ";
+    position: absolute;
+    transition: 0.3s linear;
+    color: white;
+}
+
+.ilk_teref_bir:hover,
+.ilk_teref_iki:hover,
+.ucuncu_teref_iki:hover,
+.ucuncu_teref_bir:hover {
+    &::before {
+        background-color: rgba(201, 216, 191, 0.699);
+        width: 320px;
+        height: 380px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 50px;
+        left: 20px;
+        font-size: 24px;
+        font-family: "Wix Madefor Display";
+
+    }
+}
+
+.ilk_teref_bir:hover {
+    &::before {
+        content: " Strawberry Pina Colada  ";
+    }
+}
+
+
+.ilk_teref_iki {
+    width: 360px;
+    height: 430px;
+    margin: 15px;
+    min-height: 461px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("https://images01.nicepagecdn.com/43/46/43461ef27e9c61bced952c39514365d4.jpeg");
+}
+
+.ilk_teref_iki:hover {
+    &::before {
+        content: "Vegetable salad";
+    }
+}
+
+.ucuncu_teref_bir:hover {
+    &::before {
+        content: "Strawberry Mochito";
+    }
+}
+
+.ucuncu_teref_iki:hover {
+    &::before {
+        content: "Porridge with fruit";
+    }
+}
+
+.ucuncu_teref_bir {
+    margin: 15px;
+    min-height: 461px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 360px;
+    position: relative;
+    height: 430px;
+    background-image: url("https://images01.nicepagecdn.com/7b/d2/7bd280ec3dede660592145c8677dbd4a.jpeg");
+}
+
+.ucuncu_teref_iki {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 15px;
+    min-height: 461px;
+    width: 360px;
+    position: relative;
+    height: 430px;
+    background-image: url("https://images01.nicepagecdn.com/30/ce/30cea8d7da898338ab206b95941294cd.jpeg");
+}
+
+.orta_bir {
+    width: 360px;
+    height: 270px;
+    margin: 10px;
+    min-height: 310px;
+    margin-top: 17px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("https://images01.nicepagecdn.com/db/cf/dbcfd0aa774a1a28d6aaea1e6bdf4bca.jpeg");
+}
+
+.orta_bir::before , .orta_iki::before ,.orta_son::before{
+    content: " ";
+    position: absolute;
+    transition: 0.3s linear;
+    color: white;
+}
+
+.orta_bir:hover ,.orta_iki:hover ,.orta_son:hover {
+    &::before {
+        background-color: rgba(201, 216, 191, 0.699);
+        width: 280px;
+        height: 270px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 23px;
+        left: 35px;
+        font-size: 24px;
+        font-family: "Wix Madefor Display";
+
+    }
+}
+
+.orta_bir:hover {
+    &::before {
+        content: "Fruit oats";
+    }
+}
+
+.orta_iki {
+    width: 360px;
+    height: 270px;
+    min-height: 310px;
+    margin: 10px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("https://images01.nicepagecdn.com/76/80/7680c8e140aa8b6f2822f55035645485.jpeg");
+}
+.orta_iki:hover {
+    &::before {
+        content: "  Salad with basil and fish";
+    }
+}
+
+.orta_son {
+    width: 360px;
+    height: 270px;
+    min-height: 310px;
+    margin: 10px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("https://images01.nicepagecdn.com/4f/a9/4fa9b5ddcca43eb6f49aa86927628da3.jpeg");
+}
+
+.orta_son:hover {
+    &::before {
+        content: " Egg with avocado";
+    }
+}
+
