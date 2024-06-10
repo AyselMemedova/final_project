@@ -17,10 +17,14 @@ const Galery = () => {
                         <div className="row">
                             <div className="col-12">
                                 <div className="galery_ust">
-                                    <span className='galery' data-aos="fade-up"
-                                        data-aos-duration="3000">Galery</span>
-                                    <p data-aos="fade-up"
-                                        data-aos-duration="3000">Eat well, live well </p>
+                                    <span className='galery' 
+                                    // data-aos="fade-up"
+                                    //     data-aos-duration="3000"
+                                        >Galery</span>
+                                    <p 
+                                    // data-aos="fade-up"
+                                    //     data-aos-duration="3000"
+                                        >Eat well, live well </p>
                                 </div>
                             </div>
                         </div>

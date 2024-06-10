@@ -13,7 +13,7 @@
     justify-content: space-between;
     /* position: sticky; */
     padding: 30px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
 
 }
 
@@ -43,7 +43,6 @@
     display: flex;
     align-items: center;
     gap: 30px;
-
     justify-content: space-around;
 
     li {
