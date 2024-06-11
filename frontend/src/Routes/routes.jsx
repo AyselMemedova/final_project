@@ -8,6 +8,8 @@ import Home from "../pages/site/home/home"
 import About from "../pages/site/about/About"
 import Galery from "../pages/site/galery/Galery"
 import Resipes from "../pages/site/resipes/Resipes"
+import Contact from "../pages/site/contact/Contact"
+import Price from "../pages/site/price&plan/Price"
 
 const ROUTES =[
     {
@@ -29,7 +31,16 @@ const ROUTES =[
             {
                 path:"resipes",
                 element:<Resipes/>
-            }
+            },
+            {
+                path:"contact",
+                element:<Contact/>
+            },
+            {
+                path:"price&plan",
+                element:<Price/>
+            },
+          
         ]
     },
     {

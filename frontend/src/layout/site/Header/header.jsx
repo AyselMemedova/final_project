@@ -31,9 +31,8 @@ const Header = () => {
 
                             <div className='header_list'>
                             <ul>
-                            {/* <li><Link to={"/basket"}>Basket</Link></li> */}
                                 <li> <Link to={"/about"}>About</Link></li>
-                                <li><Link to={"/plans"}>Pricing & Plans</Link></li>
+                                <li><Link to={"/price&plan"}>Pricing & Plans</Link></li>
                                 <li ><Link to={"/blog"}>Blog</Link></li>
                                 <li><Link to={"/galery"}>Galery</Link></li>
                                 <li><Link to={"/contact"}>Contact</Link></li>

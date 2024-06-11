@@ -1,3 +1,4 @@
+/* 1Cİ SECTİON */
 .left_image img {
     width: 660px;
     height: 870px;
@@ -7,7 +8,6 @@
 
 .left_image {
     position: relative;
-
 }
 
 .right_image img {
@@ -49,6 +49,7 @@
     }
 }
 
+/* 2Cİ SECTİON */
 .second_improve {
     width: 100%;
     height: 800px;
@@ -73,7 +74,6 @@
         font-weight: 700;
         font-family: "Montserrat";
         text-align: center;
-
     }
 
     p {
@@ -83,7 +83,6 @@
         width: 610px;
         height: 130px;
         font-family: "Wix Madefor Display";
-
     }
 
     button {
@@ -95,6 +94,7 @@
         font-size: 18px;
         font-family: "Wix Madefor Display";
         transition: 0.5s;
+        margin-right: 230px;
     }
 
     button:hover {
@@ -102,9 +102,7 @@
         color: rgb(29, 59, 42);
         border: 2px solid rgb(29, 59, 42);
     }
-
 }
-
 .second_all {
     width: 100%;
     height: 1340px;
@@ -114,7 +112,6 @@
     position: absolute;
     left: 190px;
     margin-top: 50px;
-
 }
 
 .second_improve_img_banan img {
@@ -149,6 +146,7 @@
     object-position: 50% 50%;
 }
 
+/* HOW IT WORKS SECTİON -3CU */
 .work_section {
     margin-top: 90px;
     margin-bottom: 100px;
@@ -204,6 +202,7 @@
     font-size: 18px;
     font-family: "Wix Madefor Display";
     transition: 0.5s;
+    margin-right: 250px;
 }
      
 .work_btn button:hover {
@@ -212,6 +211,8 @@
     border: 2px solid rgb(29, 59, 42);
 }
 
+
+/*  NOURUSH SECTİON -4CÜ */
 .nourish {
     height: 500px;
     width: 100%;
@@ -224,8 +225,6 @@
     background-color: white;
 
     h2 {
-        /* width: 580px;
-        height: 115px; */
         line-height: 1.5em;
         font-size: 38px;
         font-weight: 700;
@@ -268,8 +267,6 @@
         font-family: "Montserrat";
         width: 265px;
         color: white;
-        /* padding: 12px; */
-
     }
 }
 
@@ -284,7 +281,6 @@
 .nourish_second_card::before,
 .nourish_third_card::before {
     background-color: rgba(94, 57, 111, 0.393);
-
     width: 290px;
     height: 290px;
     content: " ";
@@ -298,22 +294,20 @@
     position: absolute;
     bottom: 130px;
     position: relative;
-
 }
+
+/* FEATURED SECTİON -SON */
 
 .featured {
     width: 100%;
     height: 365px;
     padding: 90px;
-    /* margin-top: 150px; */
-
     h3 {
         line-height: 1.5em;
         font-size: 38px;
         font-weight: 700;
         font-family: "Montserrat";
         text-align: center;
-        /* margin-top: 90px; */
     }
 }
 

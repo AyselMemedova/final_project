@@ -9,7 +9,7 @@ const Footer = () => {
         <div>
             <div className='footer_all'>
 
-                <div className="footer_top">
+                <div className="footer_top ">
                     <div className="container">
                         <div className="row">
                             <div className="col-6">

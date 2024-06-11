@@ -1,0 +1,194 @@
+ /* .error-page {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+
+.error-page h1 {
+    font-size: 6em;
+    color: #317278;
+    margin: 0;
+}
+
+.error-page h2 {
+    font-size: 2em;
+    color: #317278;
+    margin: 0;
+}
+
+.error-page p {
+    font-size: 1.2em;
+    color: #555;
+    margin: 20px 0;
+}
+
+.home-link {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    background-color: #317278;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.home-link:hover {
+    background-color: #255d5d;
+} 
+ */
+
+
+/* Copy code
+
+
+.error-page {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: bounce 1.5s infinite;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.error-page h1 {
+    font-size: 8em;
+    color: #ff6f61;
+    margin: 0;
+}
+
+.error-page h2 {
+    font-size: 2.5em;
+    color: #ff6f61;
+    margin: 10px 0;
+}
+
+.error-page p {
+    font-size: 1.2em;
+    color: #555;
+    margin: 20px 0;
+}
+
+.home-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home-link:hover {
+    background-color: #ff4c4c;
+    transform: translateY(-2px);
+} */
+
+
+.fundo{
+    animation: scales 3s alternate  infinite;
+    transform-origin: center;
+  }
+  .pao-baixo{
+     animation: rotatepao 14s cubic-bezier(.1,.49,.41,.97)  infinite;
+    transform-origin: center;
+  }
+  .pao-cima{
+     animation: rotatepao 7s 1s cubic-bezier(.1,.49,.41,.97)  infinite;
+    transform-origin: center;
+  }
+  .olhos{animation: olhos   2s  alternate  infinite;
+     transform-origin: center;
+  }
+  
+  .left-sparks{animation: left-sparks   4s  alternate  infinite;
+        transform-origin: 150px 156px;
+  }
+  
+  .right-sparks{animation: left-sparks   4s  alternate  infinite;
+        transform-origin: 310px 150px;
+  }
+  
+  .olhos{animation: olhos   2s  alternate  infinite;
+     transform-origin: center;
+  }
+  @keyframes scales{
+    from { transform: scale(0.98)}
+    to{ transform: scale(1)}
+  }
+  
+  @keyframes rotatepao{
+    0% { transform:  rotate(0deg)}
+    50% , 60%{ transform:  rotate(-20deg)}
+    100%{  transform:  rotate(0deg) }
+   
+  }
+  
+  @keyframes olhos{
+    0%{
+      transform: rotateX(0deg);
+    }
+     100%{
+      transform: rotateX(30deg);
+    }
+  }
+  
+  @keyframes left-sparks{
+    0%{
+      opacity: 0; 
+    }
+    
+  }
+  
+  .error{
+background-image: url("https://reservq.vercel.app/assets/faq-bg-7118ca12.png");
+  }
+  .error_main{
+    min-height: 600px;
+    margin: 0px auto;
+    width: auto;
+    max-width: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .path {
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: dash 4s   alternate infinite;
+  }
+  
+  @keyframes dash{
+     0%, 30%{
+       fill: 4B4B62;
+      stroke-dashoffset:   0;
+    }
+     80%,100%{
+       fill: transparent;
+      stroke-dashoffset:  -200;
+    }
+     
+    
+  }
