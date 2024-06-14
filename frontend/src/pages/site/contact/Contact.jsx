@@ -25,7 +25,7 @@ const Contact = () => {
                 <div className="contact_main">
                     <div className="container">
                         <div className="row">
-                            <div className="col-6" data-aos="fade-up"
+                            <div className="col-lg-6 col-12" data-aos="fade-up"
                                 data-aos-duration="3000">
                                 <div className='contact_left_top'>
                                     <h2>Contact</h2>
@@ -55,7 +55,7 @@ const Contact = () => {
                                 </div>
                             </div>
 
-                            <div className="col-6">
+                            <div className="col-lg-6 col-12">
                                 <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6078.98293374492!2d49.83955869383855!3d40.37579890735384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d079efb5163%3A0xc20aa51a5f0b5e01!2sCode%20Academy!5e0!3m2!1sen!2saz!4v1718045359392!5m2!1sen!2saz" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
                             </div>
 
