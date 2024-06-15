@@ -10,6 +10,8 @@ import Galery from "../pages/site/galery/Galery"
 import Resipes from "../pages/site/resipes/Resipes"
 import Contact from "../pages/site/contact/Contact"
 import Price from "../pages/site/price&plan/Price"
+import Blog from "../pages/site/blog/Blog"
+import Faq from "../pages/site/faq/faq"
 
 const ROUTES =[
     {
@@ -39,6 +41,14 @@ const ROUTES =[
             {
                 path:"price&plan",
                 element:<Price/>
+            },
+            {
+                path:"blog",
+                element:<Blog/>
+            },
+            {
+                path:"faq",
+                element:<Faq/>
             },
           
         ]

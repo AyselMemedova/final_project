@@ -98,11 +98,11 @@ const about = () => {
                                 <div className='about_bottom_text_p' data-aos="fade-up"
                                     data-aos-duration="3000">
                                     <p>
-                                        Digestive Wellness</p>
-                                    <p>Food Allergies & <br />Sensitivities</p>
-                                    <p>Healthy Cooking & <br /> Meal Planning</p>
+                                        Digestive Wellness</p> <div className='about_xett'></div>
+                                    <p>Food Allergies & <br />Sensitivities</p> <div className='about_xett'></div>
+                                    <p>Healthy Cooking & <br /> Meal Planning</p> <div className='about_xett'></div>
                                     <p>
-                                        Diets & Detoxing</p>
+                                        Diets & Detoxing</p> <div className='about_xett'></div>
 
                                     <p>Elimination Diets</p>
                                 </div>
