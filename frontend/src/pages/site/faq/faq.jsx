@@ -1,48 +1,35 @@
 import React from 'react'
 import "./Faq.css"
 
-const Faq = () => {
+const Faq = () => {     
   return (
-    <div>
-        <div class="container-fluid faq-section">
-    <div class="row">
-        <div class="col-12 text-center">
-            <h1>FAQ</h1>
-            <p>Your questions, answered.</p>
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-8 faq-content">
+    <div className='faq_all'>
+       <main class="main-content">
+        <section class="faq">
+            <h1>Frequently Asked Questions</h1>
             <div class="faq-item">
-                <input type="checkbox" id="faq1" class="faq-toggle"/>
-                <label for="faq1" class="faq-label">
-                    <h5>How do I change my eating habits?</h5>
-                </label>
+                <input type="radio" id="faq1" name="faq" class="faq-toggle"/>
+                <label for="faq1" class="faq-question">What is Heather Pearson's mission?</label>
                 <div class="faq-answer">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula nisl a eros gravida, in egestas urna vestibulum.</p>
+                    We aim to help people acquire healthy living habits with scientific and reliable information.
                 </div>
             </div>
             <div class="faq-item">
-                <input type="checkbox" id="faq2" class="faq-toggle"/>
-                <label for="faq2" class="faq-label">
-                    <h5>What is intuitive eating?</h5>
-                </label>
+                <input type="radio" id="faq2" name="faq" class="faq-toggle"/>
+                <label for="faq2" class="faq-question">Who is Dr. Nadine?</label>
                 <div class="faq-answer">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula nisl a eros gravida, in egestas urna vestibulum.</p>
+                    Dr. Nadine was a respected internal medicine specialist from Hopkins University.
                 </div>
             </div>
             <div class="faq-item">
-                <input type="checkbox" id="faq3" class="faq-toggle"/>
-                <label for="faq3" class="faq-label">
-                    <h5>How often should I exercise?</h5>
-                </label>
+                <input type="radio" id="faq3" name="faq" class="faq-toggle"/>
+                <label for="faq3" class="faq-question">How can I access the resources?</label>
                 <div class="faq-answer">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula nisl a eros gravida, in egestas urna vestibulum.</p>
+                    You can access our resources through the Pricing & Plans section on the website.
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+        </section>
+    </main>
 </div>
 
 

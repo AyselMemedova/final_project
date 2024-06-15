@@ -40,8 +40,7 @@ const about = () => {
                                 </div>
                             </div>
                             <div className="col-6">
-                                <div className="story_text" data-aos="fade-up"
-                                    data-aos-duration="3000">
+                                <div className="story_text" data-aos="fade-up" data-aos-duration="3000">
 
 
                                     <h2>My Story</h2>

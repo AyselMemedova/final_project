@@ -24,7 +24,7 @@ const Blog = () => {
 
             <div class="container mt-5">
                 <div class="row">
-                    <div class="col-12 col-md-4 mb-4">
+                    <div class="col-12 col-md-4 mb-4"  data-aos="fade-up" data-aos-duration="3000">
                         <div class="card">
                             <img src="https://static.wixstatic.com/media/2a1a02_1f38d9901e2345a483fd9e9c4d1d79bc~mv2.jpg/v1/fill/w_365,h_365,fp_0.50_0.50,q_90,enc_auto/2a1a02_1f38d9901e2345a483fd9e9c4d1d79bc~mv2.jpg" class="card-img-top" alt="Chia Pudding" />
                             <div class="card-body card-content">
@@ -38,7 +38,7 @@ const Blog = () => {
                             </div>
                         </div>
                     </div>
-                    <div style={{ height: "250px" }} class="col-12 col-md-4 mb-4">
+                    <div style={{ height: "250px" }} class="col-12 col-md-4 mb-4"  data-aos="fade-up" data-aos-duration="3000">
                         <div class="card second">
                             <img src="https://static.wixstatic.com/media/2a1a02_9f5f27f07de44c509a37a1d4deabde9f~mv2.jpg/v1/fill/w_365,h_244,fp_0.50_0.50,q_90,enc_auto/2a1a02_9f5f27f07de44c509a37a1d4deabde9f~mv2.jpg" class="card-img-top" alt="Scale" />
                             <div class="card-body">
@@ -51,7 +51,7 @@ const Blog = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-4 mb-4">
+                    <div class="col-12 col-md-4 mb-4"  data-aos="fade-up" data-aos-duration="3000">
                         <div class="card">
                             <img src="https://static.wixstatic.com/media/2a1a02_5f2118197ee24dfe8c47fd0d38e3cad4~mv2.jpg/v1/fill/w_365,h_365,fp_0.50_0.50,q_90,enc_auto/2a1a02_5f2118197ee24dfe8c47fd0d38e3cad4~mv2.jpg" class="card-img-top" alt="Healthy Toasts" />
                             <div class="card-body">

@@ -18,10 +18,10 @@
     p {
         color: rgb(29, 59, 42);
         text-align: center;
-        font-size: 32px;
+        font-size: 24px;
         width: 543px;
         height: 41px;
-        font-weight: 200;
+        /* font-weight: 200; */
     }
 
 }
@@ -183,6 +183,8 @@
 .pricing-card h2 {
     font-size: 1.5em;
     color: #333;
+    font-family: "Caudex";
+font-weight: 600;
     margin-bottom: 20px;
 }
 
@@ -193,6 +195,8 @@
 }
 
 .pricing-card p {
+    font-family: "Wix Madefor Display";
+
     color: #666;
     margin: 10px 0;
 }
@@ -200,20 +204,25 @@
 .pricing-card button {
     text-align: center;
     position: absolute;
-    background-color: #2a815c;
+    background-color: rgb(29, 59, 42);
     color: #fff;
     border: none;
-    padding: 10px 20px;
     border-radius: 4px;
+    padding: 10px 22px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1.1em;
     margin-top: 20px;
+    
     right: 50px;
     transition: background-color 0.3s;
 }
 
 .pricing-card button:hover {
-    background-color: #256b4f;
+    color: rgb(29, 59, 42);
+    background-color: transparent;
+    border: 2px solid rgb(29, 59, 42);
+    border-radius: 7px;
+
 }
 
 .pricing-card ul {
@@ -225,6 +234,8 @@
 }
 
 .pricing-card ul li {
+    font-family: "Wix Madefor Display";
+
     margin: 10px 0;
 }
 
