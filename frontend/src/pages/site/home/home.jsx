@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 
 const Home = () => {
+    
     const { data, setdata } = useContext(MainContext)
     return (
         <>
@@ -152,7 +153,7 @@ const Home = () => {
                 </div>
 
                 <div className='work_btn'>
-                    <Link to={"/plans"}> <button data-aos="fade-zoom-in"
+                    <Link to={"/price&plan"}> <button data-aos="fade-zoom-in"
                         data-aos-easing="ease-in-back"
                         data-aos-delay="300"
                         data-aos-offset="0" className='story'>Learn More</button></Link>

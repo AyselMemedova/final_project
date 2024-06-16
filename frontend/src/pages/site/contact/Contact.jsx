@@ -1,8 +1,30 @@
 import React from 'react'
-import "./Contact.css"
 import { Helmet } from 'react-helmet'
+import "./Contact.css"
+import emailjs from '@emailjs/browser';
+import { useRef } from 'react';
 
-const Contact = () => {
+const Contact = () => {  
+    const form = useRef();
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs
+          .sendForm('service_k9ok88l', 'template_5jpu07g', form.current, {
+            publicKey: '4wYggf1amM7g7MSW3',
+          })
+          .then(
+            () => {
+              console.log('SUCCESS!');
+            },
+            (error) => {
+              console.log('FAILED...', error.text);
+            },
+          );
+          e.target.reset();
+      };
+    
+
     return (
         <div>
             <Helmet>
@@ -37,20 +59,19 @@ const Contact = () => {
                                 </div>
 
                                 <div className="contact_left_form">
-                                    <form class="contact-form" />
+                                    <form class="contact-form" ref={form} onSubmit={sendEmail}  />
                                     <div class="form-row">
-                                        <input type="text" placeholder="First Name" name="first-name" />
-                                        <input type="text" placeholder="Last Name" name="last-name" />
+                                        <input type="text" placeholder="First Name" name="user_name" id='user_name'/>
+                                        <input type="text" placeholder="Last Name" />
                                     </div>
                                     <div class="form-row">
-                                        <input type="email" placeholder="Email" name="email" />
-                                        <input type="tel" placeholder="Phone" name="phone" />
+                                        <input type="email" placeholder="Email" name="user_email" id='user_email' />
+                                        <input type="tel" placeholder="Phone" />
                                     </div>
                                     <div class="form-row">
-                                        <textarea placeholder="Type your message here..." name="message"></textarea>
+                                        <textarea placeholder="Type your message here..." name="message" id='message'></textarea>
                                     </div>
                                     <button type="submit" className='submit'>Submit</button>
-
                                     <form />
                                 </div>
                             </div>

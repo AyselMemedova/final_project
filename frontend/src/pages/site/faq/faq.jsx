@@ -4,32 +4,46 @@ import "./Faq.css"
 const Faq = () => {     
   return (
     <div className='faq_all'>
-       <main class="main-content">
-        <section class="faq">
+     <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="faq_top">
+                                <h3>FAQ</h3>
+                                <p>
+                                    Contact us and solve any problem you want</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+<main class="main-content">
+        <section class="team">
             <h1>Frequently Asked Questions</h1>
-            <div class="faq-item">
-                <input type="radio" id="faq1" name="faq" class="faq-toggle"/>
-                <label for="faq1" class="faq-question">What is Heather Pearson's mission?</label>
-                <div class="faq-answer">
-                    We aim to help people acquire healthy living habits with scientific and reliable information.
+            <div class="team-member">
+                <input type="radio" id="member1" name="team" class="team-toggle" checked/>
+                <label for="member1" class="team-name">What is Heather Pearson's mission?</label>
+                <div class="team-details">
+                    <p>We aim to help people acquire healthy living habits with scientific and reliable information.Charlie is our mental health expert, focusing on mindfulness and stress management techniques</p>
                 </div>
             </div>
-            <div class="faq-item">
-                <input type="radio" id="faq2" name="faq" class="faq-toggle"/>
-                <label for="faq2" class="faq-question">Who is Dr. Nadine?</label>
-                <div class="faq-answer">
-                    Dr. Nadine was a respected internal medicine specialist from Hopkins University.
+            <div class="team-member">
+                <input type="radio" id="member2" name="team" class="team-toggle"/>
+                <label for="member2" class="team-name">Who is Dr. Nadine?</label>
+                <div class="team-details">
+                <p>Dr. Nadine was a respected internal medicine specialist from Hopkins University.Charlie is our mental health expert, focusing on mindfulness and stress management techniques </p>
                 </div>
             </div>
-            <div class="faq-item">
-                <input type="radio" id="faq3" name="faq" class="faq-toggle"/>
-                <label for="faq3" class="faq-question">How can I access the resources?</label>
-                <div class="faq-answer">
-                    You can access our resources through the Pricing & Plans section on the website.
+            <div class="team-member">
+                <input type="radio" id="member3" name="team" class="team-toggle"/>
+                <label for="member3" class="team-name">How can I access the resources?</label>
+                <div class="team-details">
+                <p>You can access our resources through the Pricing & Plans section on the website.Charlie is our mental health expert, focusing on mindfulness and stress management techniques</p>
                 </div>
             </div>
         </section>
     </main>
+
 </div>
 
 
