@@ -12,6 +12,7 @@ import Contact from "../pages/site/contact/Contact"
 import Price from "../pages/site/price&plan/Price"
 import Blog from "../pages/site/blog/Blog"
 import Faq from "../pages/site/faq/faq"
+import News from "../pages/site/news/News"
 
 const ROUTES =[
     {
@@ -50,6 +51,11 @@ const ROUTES =[
                 path:"faq",
                 element:<Faq/>
             },
+            {
+                path:"news",
+                element:<News/>
+            },
+          
           
         ]
     },

@@ -90,6 +90,9 @@ const Price = () => {
                     </div>
                 </div>
             </div>
+            <a href="#start" className='for_top'>
+            <i class="fa-solid fa-chevron-up"></i>
+            </a>
         </div>
     )
 }

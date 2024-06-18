@@ -1,3 +1,6 @@
+.home_all{
+    scroll-behavior: smooth;
+}
 /* 1Cİ SECTİON */
 .left_image img {
     width: 660px;
@@ -314,4 +317,19 @@
 .featured_logos img {
     margin-left: 70px;
     margin-top: 30px;
+}
+
+.for_top{
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgb(29, 59, 42);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    right: 20px;
+    bottom: 8px;
 }

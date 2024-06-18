@@ -47,11 +47,25 @@
 }
 
 iframe {
-    /* width: 600px; */
+    width: 600px;
     height: 600px;
-    /* margin-top: 50px; */
 }
-
+input.submit {
+    width: 140px;
+    height: 40px;
+    background-color: rgb(29, 59, 42);
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-family: "Wix Madefor Display";
+    transition: 0.5s;
+    margin-left: 200px;
+}
+input.submit:hover{
+    background-color: transparent;
+    color: rgb(29, 59, 42);
+    border: 2px solid rgb(29, 59, 42);
+}
 .contact-info {
     display: flex;
     font-family: "Wix Madefor Display";
@@ -98,6 +112,7 @@ iframe {
     height: 100px;
     resize: none;
     width: 460px;
+    padding: 50px;
 }
 
 .form-row input:hover,
@@ -117,7 +132,7 @@ button {
     /* margin-bottom: 50px; */
 }
 
-button:hover {
+input.submit button:hover {
     background-color: transparent;
     color: rgb(29, 59, 42);
     border: 2px solid rgb(29, 59, 42);

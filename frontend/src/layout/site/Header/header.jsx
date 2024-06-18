@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
     return (
         <div>
-            <div className='header_all'>
+            <div className='header_all' id='start'>
                 <div className="container">
                     <div className="row all_header ">
                         <div className="col-lg-4">

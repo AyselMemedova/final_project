@@ -13,8 +13,10 @@ const Home = () => {
             <Helmet>
                 <title>Home</title>
             </Helmet>
+            <div className='home_all'>
+
             {/* 1Cİ SECTİON */}
-            <div className='first'>
+            <div className='first' >
                 <div className="container">
                     <div className="row">
                         <div className="col-6">
@@ -176,7 +178,7 @@ const Home = () => {
                                 <div className='nourish_first_card'>
                                     <img src="https://static.wixstatic.com/media/2a1a02_1f38d9901e2345a483fd9e9c4d1d79bc~mv2.jpg/v1/fill/w_925,h_925,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/2a1a02_1f38d9901e2345a483fd9e9c4d1d79bc~mv2.jpg" alt="" />
 
-                                    <Link to={"/blog"}><p>How to Change Your Eating Habits</p></Link>
+                                    <Link to={"/news"}><p>How to Change Your Eating Habits</p></Link>
                                     {/* <p>How to Change Your Eating Habits</p> */}
                                 </div>
                             </div>
@@ -186,7 +188,7 @@ const Home = () => {
                                 <div className="nourish_second_card">
                                     <img src="https://static.wixstatic.com/media/2a1a02_9f5f27f07de44c509a37a1d4deabde9f~mv2.jpg/v1/fill/w_925,h_618,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/2a1a02_9f5f27f07de44c509a37a1d4deabde9f~mv2.jpg" alt="" />
 
-                                    <Link to={"/blog"}><p>Don’t Be Afraid of the Scale!</p></Link>
+                                    <Link to={"/news"}><p>Don’t Be Afraid of the Scale!</p></Link>
                                     {/* <p>Don’t Be Afraid of the Scale!</p> */}
                                 </div>
                             </div>
@@ -195,7 +197,7 @@ const Home = () => {
                                 <div className="nourish_third_card">
                                     <img src="https://static.wixstatic.com/media/2a1a02_5f2118197ee24dfe8c47fd0d38e3cad4~mv2.jpg/v1/fill/w_925,h_925,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/2a1a02_5f2118197ee24dfe8c47fd0d38e3cad4~mv2.jpg" alt="" />
 
-                                    <Link to={"/blog"}><p>The  Best Podcasts for Intuitive Eating</p></Link>
+                                    <Link to={"/news"}><p>The  Best Podcasts for Intuitive Eating</p></Link>
                                     {/* <p>The 3 Best Podcasts for Intuitive Eating</p> */}
                                 </div>
 
@@ -234,6 +236,11 @@ const Home = () => {
                         data-aos-duration="3000" style={{ height: "84px", width: "170px" }} src="https://static.wixstatic.com/media/84770f_b8211f91bb9046fda205fc37fac1e70c~mv2.jpg/v1/fill/w_213,h_105,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/featured%20logos-33.jpg" alt="" />
 
                 </div>
+            </div>
+
+            <a href="#start" className='for_top'>
+            <i class="fa-solid fa-chevron-up"></i>
+            </a>
             </div>
 
         </>
