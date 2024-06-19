@@ -31,6 +31,8 @@ const Dashboard = () => {
                             <th scope="col">Haqqindaki</th>
                             <th scope="col">Haqqindauc</th>
                             <th scope="col">Delete</th>
+                            {/* <th scope="col">Delete</th> */}
+
                         </tr>
                     </thead>
                     <tbody>
@@ -43,6 +45,8 @@ const Dashboard = () => {
                                 <td>{item.haqqinda}</td>
                                 <td>{item.haqqindaki}</td>
                                 <td>{item.haqqindauc}</td>
+                                <td>{item.totalPrice}</td>
+
                                 <td><button onClick={() => {
                                     deleteMehsular(item._id);
                                 }} className='btn btn-danger'>Delete</button></td>

@@ -4,7 +4,24 @@ import "./Price.css"
 import MainContext from '../../../context/context'
 
 const Price = () => {
-    const {data,setData}=useContext(MainContext)
+    const {data,setData,basket ,setBasket}=useContext(MainContext)
+
+    function addToBasket(_id) {
+        const target = basket.find((x) => x._id == _id);
+        if (target) {
+            target.count++;
+            target.totalPrice += target.price
+        }
+        else {
+            const items = data.find((x) => x._id == _id);
+            basket.push(items)
+
+        }
+
+        setBasket([...basket])
+        console.log(basket);
+    }
+
     return (
         <div>
             <Helmet>
@@ -43,12 +60,13 @@ const Price = () => {
                                     <h2>{item.title}</h2>
                                     <p class="price">${item.price}</p>
                                     <p>{item.description}</p>
-                                    <button>Select</button>
+                                    <button onClick={() => { addToBasket(item._id) }} >Select</button>
                                     <ul>
                                         <li>{item.haqqinda}</li>
                                         <li>{item.haqqindaki}</li>
                                         <li>{item.haqqindauc}</li>
                                     </ul>
+
                                 </div>
                             </div>
                         </div>

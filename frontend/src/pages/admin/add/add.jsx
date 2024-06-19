@@ -17,7 +17,7 @@ const Add = () => {
             </Helmet>
             <div>
             <Formik
-                    initialValues={{ title: '', price: '', description: '',haqqinda: '',haqqindaki: '',haqqindauc: '', }}
+                    initialValues={{ title: '', price: '', description: '',haqqinda: '',haqqindaki: '',haqqindauc: '',count:'', totalPrice:''}}
 
                     onSubmit={(values, { setSubmitting }) => {
                         setTimeout(() => {
