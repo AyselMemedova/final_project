@@ -37,6 +37,8 @@ const Header = () => {
                                 <li><Link to={"/galery"}>Galery</Link></li>
                                 <li><Link to={"/contact"}>Contact</Link></li>
                                 <li><Link to={"/faq"}>FAQ</Link></li>
+                                <li><Link to={"/basket"}>Basket</Link></li>
+
 
                             </ul>
                             </div>

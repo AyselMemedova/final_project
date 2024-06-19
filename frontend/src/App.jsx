@@ -2,12 +2,19 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import ROUTES from "./Routes/routes";
 import MainContext from "./context/context";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 function App() {
     const[loading, setLoading] = useState(true);
     const[error, setError] = useState('false');
     const [data, setdata] = useState([]);
     const router = createBrowserRouter(ROUTES);
+
+    useEffect(()=>{
+        axios.get("http://localhost:8080/api/mehsular")
+        .then((res)=>setdata([...res.data]))
+    },[])
+
     return (
         <>
         <MainContext.Provider value={{data, setdata, loading, setLoading, error, setError}}>

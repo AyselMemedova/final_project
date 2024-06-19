@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Helmet } from 'react-helmet'
 import "./Price.css"
+import MainContext from '../../../context/context'
 
 const Price = () => {
+    const {data,setData}=useContext(MainContext)
     return (
         <div>
             <Helmet>
@@ -31,25 +33,29 @@ const Price = () => {
             <div class="pricing-table ">
                 <div className="container">
                     <div  className="row">
-                        <div className="col-4" data-aos="fade-down"
+                        {
+                            data.map((item,index)=>(
+                                <div className="col-4" data-aos="fade-down"
                             data-aos-easing="linear"
                             data-aos-duration="1500">
-                            <div class="pricing-card  basic">
+                            <div class="pricing-card basic" key={index}>
                                 <div class="card-content">
-                                    <h2>Get the Basics</h2>
-                                    <p class="price">$80</p>
-                                    <p>Valid for one month</p>
+                                    <h2>{item.title}</h2>
+                                    <p class="price">${item.price}</p>
+                                    <p>{item.description}</p>
                                     <button>Select</button>
                                     <ul>
-                                        <li>4 sessions</li>
-                                        <li>20 recipes</li>
-                                        <li>Full meal prep plan</li>
+                                        <li>{item.haqqinda}</li>
+                                        <li>{item.haqqindaki}</li>
+                                        <li>{item.haqqindauc}</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
+                            ))
+                        }
 
-                        <div className="col-4" data-aos="fade-down"
+                        {/* <div className="col-4" data-aos="fade-down"
                             data-aos-easing="linear"
                             data-aos-duration="1500">
                             <div class="pricing-card best-value ">
@@ -86,7 +92,7 @@ const Price = () => {
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

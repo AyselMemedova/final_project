@@ -13,6 +13,7 @@ import Price from "../pages/site/price&plan/Price"
 import Blog from "../pages/site/blog/Blog"
 import Faq from "../pages/site/faq/faq"
 import News from "../pages/site/news/News"
+import Basket from "../pages/site/basket/Basket"
 
 const ROUTES =[
     {
@@ -54,6 +55,10 @@ const ROUTES =[
             {
                 path:"news",
                 element:<News/>
+            },
+            {
+                path:"basket",
+                element:<Basket/>
             },
           
           
