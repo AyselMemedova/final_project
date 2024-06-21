@@ -12,8 +12,11 @@ import Contact from "../pages/site/contact/Contact"
 import Price from "../pages/site/price&plan/Price"
 import Blog from "../pages/site/blog/Blog"
 import Faq from "../pages/site/faq/faq"
-import News from "../pages/site/news/News"
 import Basket from "../pages/site/basket/Basket"
+import BlogDetail from "../pages/site/blogDetail/blogDetail"
+import Login from "../pages/site/login/Login"
+import Register from "../pages/site/register/Register"
+import User from "../pages/site/user/User"
 
 const ROUTES =[
     {
@@ -52,13 +55,26 @@ const ROUTES =[
                 path:"faq",
                 element:<Faq/>
             },
-            {
-                path:"news",
-                element:<News/>
-            },
+           
             {
                 path:"basket",
                 element:<Basket/>
+            },
+            {
+                path:"blog/:id",
+                element:<BlogDetail/>
+            },
+            {
+                path:"login",
+                element:<Login/>
+            },
+            {
+                path:"register",
+                element:<Register/>
+            },
+            {
+                path:"user",
+                element:<User/>
             },
           
           

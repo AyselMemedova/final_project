@@ -1,0 +1,48 @@
+.register_sekil img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* margin: 15px; */
+    margin-bottom: 15px;
+    /* min-height: 461px; */
+    /* width: 360px; */
+    position: relative;
+    height: 630px;
+    background-image: url("https://images01.nicepagecdn.com/30/ce/30cea8d7da898338ab206b95941294cd.jpeg");
+}
+.register_all{
+    padding: 15px 20px;
+    border-radius :10px;
+    width: 70%;
+    margin: 30px auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    background-image: url("https://reservq.vercel.app/assets/traditional-bg-9423c4a0.png");
+    /* background-image: url("https://images01.nicepagecdn.com/db/cf/dbcfd0aa774a1a28d6aaea1e6bdf4bca.jpeg"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.register_headr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: #ffffffa9; */
+}
+
+.register_bottom{
+    margin-top: 30px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-evenly;
+}
+.register_h1{
+    font-family: "Caudex";
+    text-align: center;
+    font-size: 42px;
+    color:rgb(29, 59, 42);
+}
