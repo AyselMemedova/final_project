@@ -1,22 +1,18 @@
-const mongoose = require("mongoose");
-// require("dotenv").config();
-// dotenv.config();
-const express = require("express");
-const app = express();
+const mongoose = require('mongoose')
+const dotenv = require('dotenv')
 
-// const PORT=process.env.PORT
+dotenv.config()
 
-mongoose
-.connect(process.env.CONNECTION_STRING)
-.then((resp) => {
-  console.log("db connected");
-})
-.catch((error) => {
-  console.log("db not connected");
-});
 
-app.listen(process.env.PORT, (req, res) => {
-    console.log(" api running");
-  });
+const CONNECTION_STRING = process.env.CONNECTION_STRING
 
-  module.exports=app;
+const connectDB = async () =>{
+  try {
+    await mongoose.connect(CONNECTION_STRING)
+    console.log("connect db");
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+module.exports = connectDB

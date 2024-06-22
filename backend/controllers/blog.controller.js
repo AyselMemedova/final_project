@@ -1,6 +1,6 @@
 const BlogModel = require("../models/blog.model");
 
-const blog_controller = {
+const blog_controller  = {
   getAll: async (req, res) => {
     const blogs = await BlogModel.find();
 

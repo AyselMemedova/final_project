@@ -10,7 +10,7 @@ const router = {
     blog: blog_router,
     user: user_router,
     tag: tag_router,
-    mehsul:mehsular_router
+    mehsul:mehsul_router
     // report: report_router
 }
 

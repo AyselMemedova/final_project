@@ -28,10 +28,9 @@ const Header = () => {
 
                             <div className='header_list'>
                             <ul>
-                                <li> <Link to={"/add"}>Add Product</Link></li>
-                                <li ><Link to={"/add_blog"}>Blog</Link></li>
-                                <li><Link to={"/product"}>Product</Link></li>
-                                <li><Link to={"/contact"}>Contact</Link></li>
+                                <li> <Link to={"/admin/add"}>Add Product</Link></li>
+                                <li ><Link to={"/admin/add_blog"}>Blog</Link></li>
+                                <li><Link to={"/admin/product"}>Product</Link></li>
                                 {/* <li><Link to={"/faq"}>FAQ</Link></li> */}
 
                             </ul>

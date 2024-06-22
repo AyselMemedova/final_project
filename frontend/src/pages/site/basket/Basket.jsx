@@ -75,11 +75,11 @@ const Basket = () => {
                                   <button style={{ width: "50px", height: "50px" }} className='btn btn-warning' onClick={() => {
                                     decreaseMehsul(item)
                                   }}>-</button>
+
+                                </div>
                                   <button style={{ width: "50px", height: "50px" }} className='btn btn-danger' onClick={() => {
                                     increaseMehsul(item._id)
                                   }}>+</button>
-
-                                </div>
                                 <div class="col-md-3 price">
                                   <span style={{ fontSize: "26px", marginRight: "20px" }}>${item.price}</span>
                                   <p>{item.count}</p>
