@@ -58,8 +58,8 @@ input.submit {
     color: white;
     font-size: 18px;
     font-family: "Wix Madefor Display";
-    transition: 0.5s;
-    margin-left: 200px;
+    margin-left:70px;
+    transition: 0.3s;
 }
 input.submit:hover{
     background-color: transparent;
@@ -92,6 +92,7 @@ input.submit:hover{
 .form-row {
     margin: 20px;
     display: flex;
+      /* flex-direction: column; */
     margin-left: 59px;
     margin-top: 0px;
 }
@@ -109,31 +110,19 @@ input.submit:hover{
 }
 
 .form-row textarea {
-    height: 100px;
     resize: none;
-    width: 460px;
-    padding: 50px;
+    /* height: 0px; */
 }
 
 .form-row input:hover,
 .form-row textarea:hover{
     border: 2px solid #317278;
 }
-button {
-    width: 140px;
-    height: 40px;
-    background-color: rgb(29, 59, 42);
-    border: none;
-    color: white;
-    font-size: 18px;
-    font-family: "Wix Madefor Display";
-    transition: 0.5s;
-    margin-left: 200px;
-    /* margin-bottom: 50px; */
-}
 
-input.submit button:hover {
-    background-color: transparent;
-    color: rgb(29, 59, 42);
-    border: 2px solid rgb(29, 59, 42);
+.xerite{
+    padding-top: 40px;
+}
+iframe{
+    width: 550px;
+    height: 550px;
 }

@@ -52,7 +52,7 @@ const Price = () => {
                     <div  className="row">
                         {
                             data.map((item,index)=>(
-                                <div className="col-4" data-aos="fade-down"
+                                <div className="col-lg-4 col-md-8 col-sm-12" data-aos="fade-down"
                             data-aos-easing="linear"
                             data-aos-duration="1500">
                             <div class="pricing-card basic" key={index}>

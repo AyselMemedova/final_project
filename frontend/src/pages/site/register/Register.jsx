@@ -12,6 +12,8 @@ import 'toastify-js/src/toastify.css';
 import User from '../../../classes/User';
 import controller from '../../../services/api/request';
 import "./Register.css";
+import { Helmet } from "react-helmet";
+
 
 const Register = () => {
     const navigate = useNavigate();
@@ -23,7 +25,7 @@ const Register = () => {
             password: "",
             repeat_password: "",
             role: "",
-            src: "",
+            // src: "",
         },
         validationSchema: userValidation,
         onSubmit: async (values, actions) => {
@@ -65,6 +67,9 @@ const Register = () => {
 
     return (
         <div className='register_headr'>
+              <Helmet>
+        <title>Register</title>
+      </Helmet>
             <h1 className='register_h1'>Register</h1>
             <div className='register_all'>
                 <div className="container">
@@ -123,7 +128,7 @@ const Register = () => {
                                     <span style={{ color: "red" }}>{formik.errors.repeat_password}</span>
                                 )}
 
-                                <TextField id="src" type='text'
+                                {/* <TextField id="src" type='text'
                                     value={formik.values.src}
                                     onChange={formik.handleChange}
                                     name="src"
@@ -131,7 +136,7 @@ const Register = () => {
                                     label="Profile Image" variant="outlined" />
                                 {formik.touched.src && formik.errors.src && (
                                     <span style={{ color: "red" }}>{formik.errors.src}</span>
-                                )}
+                                )} */}
 
                                 <FormControl fullWidth>
                                     <InputLabel id="role-label">Role</InputLabel>

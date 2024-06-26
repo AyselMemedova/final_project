@@ -37,7 +37,7 @@ const Galery = () => {
                 <div className="galery_image">
                     <div className="container">
                         <div className="row">
-                            <div className="col-4 ilk_teref" >
+                            <div className="col-lg-4 col-md-8 col-sm-12 ilk_teref" >
 
                                 <Link to={"/resipes"}><div className='ilk_teref_bir'
                                     data-aos="flip-left"
@@ -53,7 +53,7 @@ const Galery = () => {
 
                             </div>
 
-                            <div className="col-4 orta">
+                            <div className="col-lg-4 col-md-8 col-sm-12 orta">
                                 <Link to={"/resipes"}>
                                     <div className="orta_bir" data-aos="flip-left"
                                         data-aos-easing="ease-out-cubic"
@@ -74,7 +74,7 @@ const Galery = () => {
 
                             </div>
 
-                            <div className="col-4 ucuncu_teref">
+                            <div className=" col-lg-4 col-md-8 col-sm-12 ucuncu_teref">
 
                                 <Link to={"/resipes"}>
                                     <div className="ucuncu_teref_bir" data-aos="flip-left"
@@ -104,3 +104,4 @@ const Galery = () => {
 }
 
 export default Galery
+

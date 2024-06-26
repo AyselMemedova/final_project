@@ -85,7 +85,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        /* background-color: black; */
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -96,4 +95,8 @@
     span:hover {
         color: #008566;
     }
+}
+.header_list ul li{
+    text-align: start;
+    margin-left: 5px;
 }
