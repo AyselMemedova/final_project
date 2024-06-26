@@ -10,6 +10,8 @@ import loginValidation from '../../../validations/loginValidation';
 import controller from '../../../services/api/request';
 import { endpoints } from '../../../services/api/constants';
 import { Helmet } from "react-helmet";
+import Toastify from 'toastify-js';
+import 'toastify-js/src/toastify.css';
 
 
 const Login = () => {
@@ -48,23 +50,23 @@ const Login = () => {
             navigate("/");
           });
         } else {
-          Swal.fire({
-            position: "top-end",
-            icon: "error",
-            title: response.message,
-            showConfirmButton: false,
-            timer: 1000,
-          });
+          Toastify({
+            text: "User Sign Up Failed",
+            className: "error",
+            style: {
+                background: "linear-gradient(to right, #ff5f6d, #ffc371)",
+            }
+        }).showToast();
         }
       } catch (error) {
         console.error('API POST request error:', error);
-        Swal.fire({
-          position: "top-end",
-          icon: "error",
-          title: "An error occurred while logging in",
-          showConfirmButton: false,
-          timer: 1000,
-        });
+        Toastify({
+          text: "User Sign Up Failed",
+          className: "error",
+          style: {
+              background: "linear-gradient(to right, #ff5f6d, #ffc371)",
+          }
+      }).showToast();
       }
     },
   });

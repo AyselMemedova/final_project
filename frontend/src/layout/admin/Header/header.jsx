@@ -16,30 +16,25 @@ const Header = () => {
                                         <path fill="#008566" style={{ height: '200px', width:"40px" }}  d="M118.5 124.5l1.7-1.7c16.4-16.4 24.4-29.9 23.7-40.1-.4-5.7-3.5-8.2-3.8-8.5l-2-1.5-43.6 52c-14.1 16.5-39 18.4-55.5 4.3-8-6.8-12.8-16.4-13.6-26.9s2.5-20.7 9.4-28.6c6.8-8 16.4-12.8 26.9-13.6 10.5-.8 20.7 2.5 28.6 9.4l3.4-4c-9.1-7.8-20.6-11.5-32.5-10.6-11.9.9-22.7 6.4-30.5 15.4s-11.5 20.6-10.6 32.5c.9 11.9 6.4 22.7 15.4 30.4 8.4 7.2 18.7 10.7 29 10.7 12.6 0 25.1-5.3 33.9-15.6l10-12 10.1 8.4zm19.7-43.7c.2.7.4 1.6.5 2.7.2 4.7-2.2 15.3-20.5 34l-6.3-5.2 26.3-31.5z" data-color="1"></path>
                                     </g>
                                 </svg>
-
                             </div>
                                 <span><Link to={"/admin"}>Heather Pearson</Link></span>
                             </div>
                         </div>
 
                         <div className="col-md-8">
-
                             <div className='header_right'>
-
                             <div className='header_list'>
                             <ul>
                                 <li> <Link to={"/admin/add"}>Add Product</Link></li>
                                 <li ><Link to={"/admin/add_blog"}>Blog</Link></li>
                                 <li><Link to={"/admin/product"}>Product</Link></li>
-                                {/* <li><Link to={"/faq"}>FAQ</Link></li> */}
-
                             </ul>
                             </div>
 
-                            <div className='header_log_in'>
+                            {/* <div className='header_log_in'>
                             <i class="fa-regular fa-user"></i>
                             <span>Log In</span>
-                            </div>
+                            </div> */}
                             </div>
                             
                         </div>

@@ -4,8 +4,7 @@ import { Helmet } from 'react-helmet'
 import MainContext from '../../../context/context'
 import axios from "axios";
 
-
-const Dashboard = () => {
+const Product = () => {
     const { data, setdata } = useContext(MainContext);
     function deleteMehsular(_id) {
         axios.delete(`http://localhost:8080/api/mehsular/${_id}`)
@@ -13,7 +12,7 @@ const Dashboard = () => {
         const targetOfIndex = data.indexOf(target);
         data.splice(targetOfIndex, 1)
         setdata([...data])
-    }
+      }
     return (
         <>
             <Helmet>
@@ -31,7 +30,6 @@ const Dashboard = () => {
                             <th scope="col">Haqqindaki</th>
                             <th scope="col">Haqqindauc</th>
                             <th scope="col">Delete</th>
-
                         </tr>
                     </thead>
                     <tbody>
@@ -47,10 +45,8 @@ const Dashboard = () => {
                                 <td><button onClick={() => {
                                     deleteMehsular(item._id);
                                 }} className='btn btn-danger'>Delete</button></td>
-
                             </tr>
                         ))}
-
                     </tbody>
                 </table>
             </div>
@@ -58,4 +54,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard
+export default Product

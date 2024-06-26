@@ -18,6 +18,7 @@ import Login from "../pages/site/login/Login"
 import Register from "../pages/site/register/Register"
 import User from "../pages/site/user/User"
 import AddBlog from "../pages/site/addBlog/addBlog"
+import Product from "../pages/admin/product/Product"
 
 const ROUTES =[
     {
@@ -96,6 +97,10 @@ const ROUTES =[
             {
                 path:"add",
                 element:<Add/>
+            },
+            {
+                path:"product",
+                element:<Product/>
             }
         ]
     }

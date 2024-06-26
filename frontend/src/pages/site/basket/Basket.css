@@ -135,3 +135,22 @@
 	align-items: center;
 	justify-content: center;
 }
+.page_basket_bcki{
+    background-image: url("https://reservq.vercel.app/assets/traditional-bg-9423c4a0.png");
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.basket_button{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 70px;
+}
+/* .summary{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+} */

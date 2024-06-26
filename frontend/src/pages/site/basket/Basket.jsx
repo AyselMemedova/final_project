@@ -1,90 +1,104 @@
-import React, { useContext } from 'react'
-import "./Basket.css"
-import { Helmet } from 'react-helmet'
-
-import MainContext from '../../../context/context'
+import React, { useContext, useEffect } from 'react';
+import "./Basket.css";
+import { Helmet } from 'react-helmet';
+import Toastify from 'toastify-js';
+import 'toastify-js/src/toastify.css';
+import MainContext from '../../../context/context';
 
 const Basket = () => {
-  const { basket, setBasket } = useContext(MainContext)
-  let TotalPrice = 0
+  const { basket, setBasket } = useContext(MainContext);
+
+  useEffect(() => {
+    const storedBasket = localStorage.getItem('basket');
+    if (storedBasket) {
+      setBasket(JSON.parse(storedBasket));
+    }
+  }, [setBasket]);
+
+  let TotalPrice = 0;
   for (let i = 0; i < basket.length; i++) {
-    TotalPrice += basket[i].totalPrice
+    TotalPrice += basket[i].totalPrice;
+  }
+
+  function updateLocalStorage(updatedBasket) {
+    localStorage.setItem('basket', JSON.stringify(updatedBasket));
   }
 
   function increaseMehsul(_id) {
-    const target=basket.find((x)=>x._id==_id);
-    target.count++
-    // item.totalPrice += item.price;
-    // item.count++;
-    setBasket([...basket]);
-    // localStorage.setItem("basket", JSON.stringify(basket));
+    const target = basket.find((x) => x._id === _id);
+    target.count++;
+    target.totalPrice += target.price;
+    Toastify({
+      text: "Product added successfully",
+      className: "info",
+      style: {
+        background: "linear-gradient(to right, #00b09b, #96c93d)",
+      }
+    }).showToast();
+    const updatedBasket = [...basket];
+    setBasket(updatedBasket);
+    updateLocalStorage(updatedBasket);
   }
 
   function decreaseMehsul(item) {
     if (item.count > 1) {
+      Toastify({
+        text: "Product deleted",
+        className: "error",
+        style: {
+          background: "linear-gradient(to right, #ff5f6d, #ffc371)",
+        }
+      }).showToast();
       item.count--;
       item.totalPrice -= item.price;
     } else {
-      const targetOfBasket = basket.find((x) => x._id == item._id)
-      const targetOfIndex = basket.indexOf(targetOfBasket)
+      const targetOfBasket = basket.find((x) => x._id === item._id);
+      const targetOfIndex = basket.indexOf(targetOfBasket);
       basket.splice(targetOfIndex, 1);
     }
-    setBasket([...basket])
-    // localStorage.setItem("basket", JSON.stringify(basket));
+    const updatedBasket = [...basket];
+    setBasket(updatedBasket);
+    updateLocalStorage(updatedBasket);
   }
 
   return (
     <div>
       <Helmet>
-        <title>Price&Plans</title>
+        <title>Basket</title>
       </Helmet>
-      <main class="page">
-        <section class="shopping-cart dark">
-          <div class="container">
-            <div class="block-heading">
-              <h2>Basket</h2>
-              {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p> */}
+      <main className="page" style={{ color: "rgb(29, 59, 42)" }}>
+        <section className="shopping-cart dark">
+          <div className="container">
+            <div className="block-heading">
+              <h2 style={{ color: "rgb(29, 59, 42)", fontSize: "50px" }}>Basket</h2>
             </div>
-            <div class="content">
-              <div class="row">
-                <div class="col-md-12 col-lg-8">
-                  <div class="items">
-
+            <div className="content page_basket_bcki">
+              <div className="row">
+                <div className="col-md-12 col-lg-8">
+                  <div className="items">
                     {basket.map((item, index) => (
-                      <div class="product" >
-                        <div class="row" key={index}>
-                          <div class="col-md-3">
-                            {/* <img class="img-fluid mx-auto d-block image" src="assets/img/image.jpg"/> */}
-                          </div>
-                          <div class="col-md-8">
-                            <div class="info">
-                              <div class="row">
-                                <div class="col-md-5 product-name">
-                                  <div class="product-name">
-                                    <a href="#" style={{ fontSize: "22px", }}>{item.title}</a>
-                                    <div class="product-info">
-                                      <div><span class="value" style={{ fontSize: "20px" }}>{item.description}</span></div>
-                                      <div> <span class="value">{item.haqqinda}</span></div>
-                                      <div><span class="value">{item.haqqindaki}</span></div>
+                      <div className="product" key={index}>
+                        <div className="row">
+                          <div className="col-md-12">
+                            <div className="info">
+                              <div className="row">
+                                <div className="col-md-6 product-name">
+                                  <div className="product-name" style={{ marginLeft: "20px" }}>
+                                    <a href="#" style={{ fontSize: "28px", color: "#2a815c", fontFamily: "Caudex" }}>{item.title}</a>
+                                    <div className="product-info" style={{ fontSize: "14px", fontFamily: "Wix Madefor Display" }}>
+                                      <div><span className="value" style={{ fontSize: "20px", fontFamily: "Wix Madefor Display" }}>{item.description}</span></div>
+                                      <div><span className="value">{item.haqqinda}</span></div>
+                                      <div><span className="value">{item.haqqindaki}</span></div>
                                     </div>
                                   </div>
                                 </div>
-                                <div class="col-md-4 quantity">
-                                  {/* <label for="quantity">Quantity:</label> */}
-                                  {/* <input id="quantity" type="number" value="1" class="form-control quantity-input"/> */}
-                                  <button style={{ width: "50px", height: "50px" }} className='btn btn-warning' onClick={() => {
-                                    decreaseMehsul(item)
-                                  }}>-</button>
-
-                                </div>
-                                  <button style={{ width: "50px", height: "50px" }} className='btn btn-danger' onClick={() => {
-                                    increaseMehsul(item._id)
-                                  }}>+</button>
-                                <div class="col-md-3 price">
-                                  <span style={{ fontSize: "26px", marginRight: "20px" }}>${item.price}</span>
-                                  <p>{item.count}</p>
-                                  <p class="price">Total: ${item.totalPrice}</p>
-
+                                <div className="col-4" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+                                  <button style={{ width: "50px", height: "50px" }} className='btn btn-warning' onClick={() => decreaseMehsul(item)}>-</button>
+                                  <div className="price" style={{ display: "flex", flexDirection: "column", marginLeft: "8px" }}>
+                                    <span style={{ fontSize: "22px", marginRight: "20px", fontFamily: "Wix Madefor Display" }}>Item price: ${item.price}</span>
+                                    <p style={{ fontSize: "14px", fontFamily: "Wix Madefor Display" }}>Item Count: {item.count}</p>
+                                  </div>
+                                  <button style={{ width: "50px", height: "50px" }} className='btn btn-danger' onClick={() => increaseMehsul(item._id)}>+</button>
                                 </div>
                               </div>
                             </div>
@@ -92,18 +106,13 @@ const Basket = () => {
                         </div>
                       </div>
                     ))}
-
-
                   </div>
                 </div>
-                <div class="col-md-12 col-lg-4">
-                  <div class="summary">
-                    <h3>Summary</h3>
-                    {/* <p>{item.count}</p>
-                    <p class="price">Total: ${item.totalPrice}</p> */}
-                      {/* <p>{item.count}</p>
-                    <div class="summary-item"><span class="text">Total</span><span class="price">{item.TotalPrice}$</span></div> */}
-                    <button type="button" class="btn btn-primary btn-lg btn-block">Checkout</button>
+                <div className="col-md-4">
+                  <div className="summary">
+                    <h3 style={{ color: "#2a815c", fontSize: "40px" ,fontFamily: "Caudex"}}>Summary</h3>
+                    <div className="summary-item" style={{ fontSize: "28px", fontFamily: "Wix Madefor Display"}}><span className="text">Total: </span><span className="price">${TotalPrice}</span></div>
+                    <button type="button" className="basket_button">Order</button>
                   </div>
                 </div>
               </div>
@@ -112,7 +121,7 @@ const Basket = () => {
         </section>
       </main>
     </div>
-  )
+  );
 }
 
-export default Basket
+export default Basket;

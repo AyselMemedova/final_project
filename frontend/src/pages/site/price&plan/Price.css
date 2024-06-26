@@ -74,7 +74,6 @@
     transition: transform 0.3s ease-in-out;
 }
 
-/* Zoom effect on card content */
 .pricing-card:hover .card-content {
     transform: scale(1.05);
 }
@@ -99,7 +98,6 @@
 
 .pricing-card p {
     font-family: "Wix Madefor Display";
-
     color: #666;
     margin: 10px 0;
 }
