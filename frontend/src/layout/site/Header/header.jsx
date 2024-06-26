@@ -45,7 +45,10 @@ const Header = () => {
 
                             <div className='header_log_in'>
                             <i class="fa-regular fa-user"></i>
-                            <span>Log In</span>
+                            <Link to={"/login"}>
+                            <span style={{color:"rgb(29, 59, 42)"}}>Log In</span>
+                            </Link>
+                            
                             </div>
                             </div>
                             

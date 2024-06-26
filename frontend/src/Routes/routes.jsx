@@ -17,6 +17,7 @@ import BlogDetail from "../pages/site/blogDetail/blogDetail"
 import Login from "../pages/site/login/Login"
 import Register from "../pages/site/register/Register"
 import User from "../pages/site/user/User"
+import AddBlog from "../pages/site/addBlog/addBlog"
 
 const ROUTES =[
     {
@@ -75,6 +76,10 @@ const ROUTES =[
             {
                 path:"user",
                 element:<User/>
+            },
+            {
+                path:"addBlog",
+                element:<AddBlog/>
             },
           
           
