@@ -3,25 +3,17 @@
     padding: 0;
     box-sizing: border-box;
     cursor: pointer;
-
 }
-
-
 .all_header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* position: sticky; */
     padding: 30px;
-    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
-
 }
 
 .header_logo {
     display: flex;
     align-items: center;
-
-    /* justify-content: space-between;  */
     span {
         margin-left: 15px;
         color: black;
@@ -51,17 +43,15 @@
         text-align: right;
         line-height: 40px;
         padding: 0 10px;
-        font-family: "Wix Madefor Display";
         font-size: 16px;
         transition: var(--trans, color .4s ease 0s);
 
         a {
             color: black;
             text-decoration: none;
-
+            font-family: "Caudex";
         }
     }
-
     a:hover {
         color: #008566;
     }
@@ -72,7 +62,6 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    /* gap: 40px;   */
 }
 
 .header_log_in {
@@ -80,7 +69,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     i {
         display: flex;
         align-items: center;
@@ -89,7 +77,6 @@
         height: 40px;
         border-radius: 50%;
         color: #008566;
-
     }
 
     span:hover {

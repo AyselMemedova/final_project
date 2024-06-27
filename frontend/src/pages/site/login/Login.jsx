@@ -12,7 +12,7 @@ import { endpoints } from '../../../services/api/constants';
 import { Helmet } from "react-helmet";
 import Toastify from 'toastify-js';
 import 'toastify-js/src/toastify.css';
-
+import {jwtDecode} from "jwt-decode";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -35,11 +35,18 @@ const Login = () => {
       try {
         const response = await controller.post(endpoints.login, { email, password });
 
-        if (response.auth) {
-          actions.resetForm();
+        console.log("alpayaaaaaaa",response.token);
+        console.log('API Response:', response); 
+        if ( response.token) {
           dispatch(login(response.user));
-          const token = response.token;
-          Cookies.set('token', token, { expires: 1 });
+          localStorage.setItem("token", response.token);
+
+          const decoded = jwtDecode(response.token);
+          console.log('Decoded JWT:', decoded); 
+
+          localStorage.setItem("userId", decoded.userId);
+          localStorage.setItem("username", decoded.username);
+
           Swal.fire({
             position: "top-end",
             icon: "success",
@@ -50,30 +57,25 @@ const Login = () => {
             navigate("/");
           });
         } else {
-          Toastify({
-            text: "User Sign Up Failed",
-            className: "error",
-            style: {
-                background: "linear-gradient(to right, #ff5f6d, #ffc371)",
-            }
-        }).showToast();
+          throw new Error('Authentication failed or token missing');
         }
       } catch (error) {
-        console.error('API POST request error:', error);
+        console.error('Login process error:', error);
+
         Toastify({
-          text: "User Sign Up Failed",
+          text: "User Login Failed",
           className: "error",
           style: {
-              background: "linear-gradient(to right, #ff5f6d, #ffc371)",
+            background: "linear-gradient(to right, #ff5f6d, #ffc371)",
           }
-      }).showToast();
+        }).showToast();
       }
     },
   });
 
   return (
     <div>
-        <Helmet>
+      <Helmet>
         <title>Login</title>
       </Helmet>
       <h1 className='register_h1'>Login</h1>
@@ -138,7 +140,7 @@ const Login = () => {
               <img
                 style={{ width: "440px", marginLeft: "30px" }}
                 src="https://images01.nicepagecdn.com/30/ce/30cea8d7da898338ab206b95941294cd.jpeg"
-                alt=""
+                alt="Login visual"
               />
             </div>
           </div>

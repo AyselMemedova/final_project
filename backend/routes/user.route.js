@@ -9,7 +9,11 @@ user_router.get("/api/users", controller.user.getAll);
 user_router.get("/api/users/:id", controller.user.getOne);
 user_router.delete("/api/users/:id", controller.user.delete);
 user_router.patch("/api/users/:id", controller.user.update);
-user_router.post("/api/users",  controller.user.register); //file upload middleware
+user_router.post("/api/users",  controller.user.register); 
+user_router.post("/api/users-delete", controller.user.deleteAll)
+user_router.post("/api/login", controller.user.login)
+
+//file upload middleware
 // user_router.post("/api/login", controller.user.user_login);
 // user_router.get("/api/verify/:token", controller.user.verify);
 

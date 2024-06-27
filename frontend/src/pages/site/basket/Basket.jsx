@@ -96,7 +96,7 @@ const Basket = () => {
                                   <button style={{ width: "50px", height: "50px" }} className='btn btn-warning' onClick={() => decreaseMehsul(item)}>-</button>
                                   <div className="price" style={{ display: "flex", flexDirection: "column", marginLeft: "8px" }}>
                                     <span style={{ fontSize: "22px", marginRight: "20px", fontFamily: "Wix Madefor Display" }}>Item price: ${item.price}</span>
-                                    <p style={{ fontSize: "14px", fontFamily: "Wix Madefor Display" }}>Item Count: {item.count}</p>
+                                    <p style={{ fontSize: "14px", fontFamily: "Wix Madefor Display" }}>Item <br /> Count: {item.count}</p>
                                   </div>
                                   <button style={{ width: "50px", height: "50px" }} className='btn btn-danger' onClick={() => increaseMehsul(item._id)}>+</button>
                                 </div>

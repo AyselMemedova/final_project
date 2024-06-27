@@ -3,10 +3,19 @@ import { Helmet } from "react-helmet";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
+import Toastify from 'toastify-js';
+import 'toastify-js/src/toastify.css';
 
 const Contact = () => {
   const form = useRef();
   const sendEmail = (e) => {
+    Toastify({
+      text: "Email send",
+      className: "info",
+      style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+      }
+  }).showToast();
     e.preventDefault();
 
     emailjs
