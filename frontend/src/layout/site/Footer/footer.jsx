@@ -1,66 +1,67 @@
-
-import React from 'react'
-import "./footer.css"
+import React from 'react';
+import "./footer.css";
 import { Link } from "react-router-dom";
-
 
 const Footer = () => {
     return (
-        <div>
-            <div className='footer_all'>
+        <div className="footer">
+            <div className="footer-top">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-3 col-md-6 col-sm-12 footer-section">
+                            <h5 id='footer_h5'>Heather Pearson</h5>
+                            <p >A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                            <Link to="/about" className="read-more">Read More &rarr;</Link>
+                        </div>
+                        <div className="col-lg-3 col-md-6 col-sm-12 footer-section">
+                            <h5 id='footer_h5' >Pages</h5>
+                            <ul className="footer-links">
+                                <li><Link to={"/blog"}>Blog</Link></li>
+                                <li><Link to={"/contact"}>Contact</Link></li>
+                                <Link to={"/price&plan"} className="dropdown-item">Pricing & Plans</Link>
+                                <Link to={"/galery"} className="dropdown-item">Galery</Link>
+                                <Link to={"/faq"} className="dropdown-item">FAQ</Link>
 
-                <div className="footer_top ">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-6">
-                                <div className="footer_logo">
-                                    <div className='footer_logo_sekil'>
-                                        <svg preserveAspectRatio="xMidYMid meet" data-bbox="19.967 54.567 160.063 90.733" xmlns="http://www.w3.org/2000/svg" width="59" height="33" viewBox="19.967 54.567 160.063 90.733" data-type="color" role="img" aria-label="Homepage"><defs></defs>
-                                            <g>
-                                                <path fill="#ffffff" d="M179.9 97.4c-.9-11.9-6.4-22.7-15.4-30.4-9-7.8-20.6-11.5-32.5-10.6-11.9.9-22.7 6.4-30.4 15.4l-11.4 13c-7.5-4.4-17-.1-28.1 13.1l4 3.4C74.7 91.2 81.6 87 86.7 88.9l-14.9 17.2 4 3.4 14.9-17.2c2.6 4.7-.3 12.1-8.8 22.2l4 3.4c11-13 13.8-23 8.4-29.7l11.3-13.1c6.8-8 16.4-12.8 26.9-13.6 10.5-.8 20.7 2.5 28.6 9.4 8 6.8 12.8 16.4 13.6 26.9s-2.5 20.7-9.4 28.6c-6.8 8-16.4 12.8-26.9 13.6-10.5.8-20.7-2.5-28.6-9.4l-3.4 4c8.2 7 18.3 10.7 29 10.7 1.2 0 2.3 0 3.5-.1 11.9-.9 22.7-6.4 30.4-15.4 7.7-9 11.5-20.5 10.6-32.4z" data-color="1"></path>
-                                                <path fill="#ffffff" style={{ height: '200px', width: "40px" }} d="M118.5 124.5l1.7-1.7c16.4-16.4 24.4-29.9 23.7-40.1-.4-5.7-3.5-8.2-3.8-8.5l-2-1.5-43.6 52c-14.1 16.5-39 18.4-55.5 4.3-8-6.8-12.8-16.4-13.6-26.9s2.5-20.7 9.4-28.6c6.8-8 16.4-12.8 26.9-13.6 10.5-.8 20.7 2.5 28.6 9.4l3.4-4c-9.1-7.8-20.6-11.5-32.5-10.6-11.9.9-22.7 6.4-30.5 15.4s-11.5 20.6-10.6 32.5c.9 11.9 6.4 22.7 15.4 30.4 8.4 7.2 18.7 10.7 29 10.7 12.6 0 25.1-5.3 33.9-15.6l10-12 10.1 8.4zm19.7-43.7c.2.7.4 1.6.5 2.7.2 4.7-2.2 15.3-20.5 34l-6.3-5.2 26.3-31.5z" data-color="1"></path>
-                                            </g>
-                                        </svg>
-
-                                    </div>
-                                    <span><Link to={"/"}>Heather Pearson</Link></span>
-
-                                </div>
+                            </ul>
+                        </div>
+                        <div className="col-lg-3 col-md-6 col-sm-12 footer-section">
+                            <h5 id='footer_h5'>Tag Cloud</h5>
+                            <div className="tag-cloud">
+                                <span className="tag">Health</span>
+                                <span className="tag">Menu</span>
+                                <span className="tag">Food</span>
+                                <span className="tag">Salads</span>
+                                <span className="tag">Tasty</span>
+                                <span className="tag">Delicious</span>
+                                <span className="tag">Desserts</span>
+                                <span className="tag">Drinks</span>
                             </div>
+                        </div>
+                        <div className="col-lg-3 col-md-6 col-sm-12 footer-section">
+                            <h5 id='footer_h5'>Subscribe</h5>
+                            <div className='footer_email'>
 
-                            <div className="col-6">
-                                <div className="footer_ust">
-                                    <Link to={"https://www.facebook.com/"}> <i class="fa-brands fa-facebook-f"></i></Link>
-                                    <Link to={"https://x.com/"}><i class="fa-brands fa-x-twitter"></i></Link>
-                                    <Link to={"https://www.instagram.com/"}><i class="fa-brands fa-instagram"></i></Link>
-
-                                </div>
-
-                                <div className='footer_alt'>
-                                    <ul>
-                                        <li> <Link to={"/about"}>About</Link></li>
-                                        <li><Link to={"/plans"}>Pricing & Plans</Link></li>
-                                        <li ><Link to={"/blog"}>Blog</Link></li>
-                                        <li><Link to={"/galery"}>Galery</Link></li>
-                                        <li><Link to={"/contact"}>Contact</Link></li>
-                                    </ul>
-
-                                </div>
+                           <textarea name="" id="" rows={2} cols={40} placeholder='Enter your message'></textarea>
+                             <button className='footer_email_btn' id='footer_email_btn'>Submit</button>
+                           </div>
+                           
+                            <h5 id='footer_h5' style={{marginTop:"29px"}}>Follow Us</h5>
+                            <div className="social-links">
+                                <Link to="https://twitter.com" className="social-icon"><i className="fa-brands fa-twitter"></i></Link>
+                                <Link to="https://facebook.com" className="social-icon"><i className="fa-brands fa-facebook-f"></i></Link>
+                                <Link to="https://instagram.com" className="social-icon"><i className="fa-brands fa-instagram"></i></Link>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div className="footer_bottom">
-                    <p>
-                        © 2035 by Amy Kohler. Powered and secured by Wix</p>
-                </div>
-
-
-
+            </div>
+            <div className="footer-bottom">
+                <p>© 2024 Your Company Name. All rights reserved.</p>
+               
             </div>
         </div>
-    )
+    );
 }
 
-export default Footer
+export default Footer;
+

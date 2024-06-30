@@ -18,7 +18,7 @@ const Header = () => {
                                         </g>
                                     </svg>
                                 </div>
-                                <span><Link to={"/"}>Heather Pearson</Link></span>
+                                <span id='heder'><Link to={"/"}>Heather Pearson</Link></span>
                             </div>
                         </div>
 

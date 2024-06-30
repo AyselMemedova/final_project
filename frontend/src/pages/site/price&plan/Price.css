@@ -168,3 +168,62 @@
     filter: blur(30px);
 }
 
+#button_filter {
+    background-color: transparent;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5px;
+    color: #256b4f;
+}
+
+.button_sira {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 120px;
+    bottom: 290px;
+
+    a {
+        font-family: "Wix Madefor Display";
+        padding: 5px;
+    }
+}
+
+.button_sira input {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-family: "Wix Madefor Display";
+    outline: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+#button_filter {
+    background-color: transparent;
+    color: #256b4f;
+    border: 1px solid #256b4f;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#button_filter:hover {
+    background-color: #256b4f;
+    color: #fff;
+}
+
+li {
+    list-style-type: none;
+    visibility: visible !important;
+    unicode-bidi: normal !important;
+    font-variant-numeric: normal !important;
+    text-transform: inherit !important;
+    text-indent: initial !important;
+    text-align: inherit !important;
+    text-align-last: inherit !important;
+}

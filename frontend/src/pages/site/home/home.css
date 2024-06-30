@@ -273,6 +273,18 @@
     }
 }
 
+#nourish_p{
+    text-decoration: none;
+        color: black;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        font-size: 22px;
+        font-family: "Montserrat";
+        width: 265px;
+        color: white;
+}
+
 .nourish_first_card img,
 .nourish_second_card img,
 .nourish_third_card img {

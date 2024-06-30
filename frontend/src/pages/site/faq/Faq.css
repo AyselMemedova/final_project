@@ -3,7 +3,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* width: 100%; */
     height: 230px;
     background-color: rgb(201, 216, 191);
     font-family: "Caudex";
@@ -25,6 +24,7 @@
         color: rgb(29, 59, 42);
     }
 }
+
 .main-content {
     font-family: "Caudex";
 
@@ -32,15 +32,17 @@
     max-width: 800px;
     margin: auto;
     margin-top: 50px;
-margin-bottom: 50px;
+    margin-bottom: 50px;
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.main-content:hover{
+
+.main-content:hover {
     box-shadow: 0 14px 20px rgb(29, 59, 42);
 
 }
+
 .team {
     margin-top: 2rem;
 }
@@ -86,13 +88,12 @@ margin-bottom: 50px;
 
 }
 
-.team-toggle:checked + .team-name + .team-details {
+.team-toggle:checked+.team-name+.team-details {
     max-height: 200px;
     padding: 1rem;
 }
 
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .header .nav {
         flex-direction: column;

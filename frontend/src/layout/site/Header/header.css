@@ -4,6 +4,7 @@
     box-sizing: border-box;
     cursor: pointer;
 }
+
 .all_header {
     display: flex;
     align-items: center;
@@ -14,20 +15,21 @@
 .header_logo {
     display: flex;
     align-items: center;
-    span {
-        margin-left: 15px;
-        color: black;
+}
+
+#heder {
+    margin-left: 15px;
+    cursor: pointer;
+    color: rgb(29, 59, 42);
+
+
+    a {
+        text-decoration: none;
+        color: #008566;
         font-size: 18px;
-        cursor: pointer;
-        color: rgb(29,59,42);
         font-family: "Montserrat";
         font-weight: 700;
 
-        a {
-            text-decoration: none;
-            color: #008566;
-
-        }
     }
 }
 
@@ -52,6 +54,7 @@
             font-family: "Caudex";
         }
     }
+
     a:hover {
         color: #008566;
     }
@@ -69,6 +72,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
     i {
         display: flex;
         align-items: center;
@@ -83,7 +87,8 @@
         color: #008566;
     }
 }
-.header_list ul li{
+
+.header_list ul li {
     text-align: start;
     margin-left: 5px;
 }

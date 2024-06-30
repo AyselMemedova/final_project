@@ -26,7 +26,7 @@ const Error = () => {
                         </div>
                     </div>
 
-                    <div className="rotate-square"></div> {/* Dönen kareyi ekliyoruz */}
+                    <div className="rotate-square"></div> 
 
                     <p className='error_p'>It seems you've ventured too far.</p>
                     <div className="but">

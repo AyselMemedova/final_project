@@ -17,21 +17,12 @@ const Galery = () => {
                         <div className="row">
                             <div className="col-12">
                                 <div className="galery_ust">
-                                    <span className='galery' 
-                                    // data-aos="fade-up"
-                                    //     data-aos-duration="3000"
-                                        >Galery</span>
-                                    <p 
-                                    // data-aos="fade-up"
-                                    //     data-aos-duration="3000"
-                                        >Eat well, live well </p>
+                                    <span className='galery' >Galery</span>
+                                    <p >Eat well, live well </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
 
                 <div className="galery_image">
@@ -49,8 +40,6 @@ const Galery = () => {
                                     data-aos-easing="ease-out-cubic"
                                     data-aos-duration="2000" ></div>
                                 </Link>
-
-
                             </div>
 
                             <div className="col-lg-4 col-md-8 col-sm-12 orta">

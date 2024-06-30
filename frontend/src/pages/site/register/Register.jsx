@@ -128,16 +128,6 @@ const Register = () => {
                                     <span style={{ color: "red" }}>{formik.errors.repeat_password}</span>
                                 )}
 
-                                {/* <TextField id="src" type='text'
-                                    value={formik.values.src}
-                                    onChange={formik.handleChange}
-                                    name="src"
-                                    onBlur={formik.handleBlur}
-                                    label="Profile Image" variant="outlined" />
-                                {formik.touched.src && formik.errors.src && (
-                                    <span style={{ color: "red" }}>{formik.errors.src}</span>
-                                )} */}
-
                                 <FormControl fullWidth>
                                     <InputLabel id="role-label">Role</InputLabel>
                                     <Select

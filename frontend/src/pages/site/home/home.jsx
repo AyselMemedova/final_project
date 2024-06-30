@@ -178,7 +178,7 @@ const Home = () => {
                                 <div className='nourish_first_card'>
                                     <img src="https://static.wixstatic.com/media/2a1a02_1f38d9901e2345a483fd9e9c4d1d79bc~mv2.jpg/v1/fill/w_925,h_925,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/2a1a02_1f38d9901e2345a483fd9e9c4d1d79bc~mv2.jpg" alt="" />
 
-                                    <Link to={"/news"}><p>How to Change Your Eating Habits</p></Link>
+                                    <Link to={"/news"}><p id='nourish_p' >How to Change Your Eating Habits</p></Link>
                                     {/* <p>How to Change Your Eating Habits</p> */}
                                 </div>
                             </div>
@@ -188,7 +188,7 @@ const Home = () => {
                                 <div className="nourish_second_card">
                                     <img src="https://static.wixstatic.com/media/2a1a02_9f5f27f07de44c509a37a1d4deabde9f~mv2.jpg/v1/fill/w_925,h_618,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/2a1a02_9f5f27f07de44c509a37a1d4deabde9f~mv2.jpg" alt="" />
 
-                                    <Link to={"/news"}><p>Don’t Be Afraid of the Scale!</p></Link>
+                                    <Link to={"/news"}><p id='nourish_p' >Don’t Be Afraid of the Scale!</p></Link>
                                     {/* <p>Don’t Be Afraid of the Scale!</p> */}
                                 </div>
                             </div>
@@ -197,7 +197,7 @@ const Home = () => {
                                 <div className="nourish_third_card">
                                     <img src="https://static.wixstatic.com/media/2a1a02_5f2118197ee24dfe8c47fd0d38e3cad4~mv2.jpg/v1/fill/w_925,h_925,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/2a1a02_5f2118197ee24dfe8c47fd0d38e3cad4~mv2.jpg" alt="" />
 
-                                    <Link to={"/news"}><p>The  Best Podcasts for Intuitive Eating</p></Link>
+                                    <Link to={"/news"}><p id='nourish_p' >The  Best Podcasts for Intuitive Eating</p></Link>
                                     {/* <p>The 3 Best Podcasts for Intuitive Eating</p> */}
                                 </div>
 

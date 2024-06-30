@@ -13,9 +13,9 @@ const Contact = () => {
       text: "Email send",
       className: "info",
       style: {
-          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        background: "linear-gradient(to right, #00b09b, #96c93d)",
       }
-  }).showToast();
+    }).showToast();
     e.preventDefault();
 
     emailjs
@@ -89,13 +89,13 @@ const Contact = () => {
                       />
                       <input type="tel" placeholder="Phone" />
                     </div>
-                    <div class="form-row">
-                    <textarea
-        rows="3" cols="700" maxlength="200"
-        placeholder="Type your message here..."
-        name="message"
-        id="message"
-    ></textarea>
+                    <div class="form-row" style={{width:"400px"}}>
+                      <textarea
+                        rows="3" cols={"70"}
+                        placeholder="Type your message here..."
+                        name="message"
+                        id="message"
+                      ></textarea>
                     </div>
                     <input type="submit" className="submit" value="Send" />
                   </form>

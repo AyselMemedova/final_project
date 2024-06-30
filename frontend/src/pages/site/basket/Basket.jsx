@@ -9,7 +9,7 @@ const Basket = () => {
   const { basket, setBasket } = useContext(MainContext);
 
   useEffect(() => {
-    const storedBasket = localStorage.getItem('basket');
+    const storedBasket = localStorage.getItem('basketForDiplomWork');
     if (storedBasket) {
       setBasket(JSON.parse(storedBasket));
     }
@@ -21,7 +21,7 @@ const Basket = () => {
   }
 
   function updateLocalStorage(updatedBasket) {
-    localStorage.setItem('basket', JSON.stringify(updatedBasket));
+    localStorage.setItem('basketForDiplomWork', JSON.stringify(updatedBasket));
   }
 
   function increaseMehsul(_id) {
@@ -42,6 +42,8 @@ const Basket = () => {
 
   function decreaseMehsul(item) {
     if (item.count > 1) {
+      item.count--;
+      item.totalPrice -= item.price;
       Toastify({
         text: "Product deleted",
         className: "error",
@@ -49,8 +51,6 @@ const Basket = () => {
           background: "linear-gradient(to right, #ff5f6d, #ffc371)",
         }
       }).showToast();
-      item.count--;
-      item.totalPrice -= item.price;
     } else {
       const targetOfBasket = basket.find((x) => x._id === item._id);
       const targetOfIndex = basket.indexOf(targetOfBasket);
@@ -110,8 +110,8 @@ const Basket = () => {
                 </div>
                 <div className="col-md-4">
                   <div className="summary">
-                    <h3 style={{ color: "#2a815c", fontSize: "40px" ,fontFamily: "Caudex"}}>Summary</h3>
-                    <div className="summary-item" style={{ fontSize: "28px", fontFamily: "Wix Madefor Display"}}><span className="text">Total: </span><span className="price">${TotalPrice}</span></div>
+                    <h3 style={{ color: "#2a815c", fontSize: "40px", fontFamily: "Caudex" }}>Summary</h3>
+                    <div className="summary-item" style={{ fontSize: "28px", fontFamily: "Wix Madefor Display" }}><span className="text">Total: </span><span className="price">${TotalPrice}</span></div>
                     <button type="button" className="basket_button">Order</button>
                   </div>
                 </div>
