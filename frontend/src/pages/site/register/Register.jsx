@@ -128,7 +128,7 @@ const Register = () => {
                                     <span style={{ color: "red" }}>{formik.errors.repeat_password}</span>
                                 )}
 
-                                <FormControl fullWidth>
+                                {/* <FormControl fullWidth>
                                     <InputLabel id="role-label">Role</InputLabel>
                                     <Select
                                         value={formik.values.role}
@@ -145,7 +145,7 @@ const Register = () => {
                                 </FormControl>
                                 {formik.touched.role && formik.errors.role && (
                                     <span style={{ color: "red" }}>{formik.errors.role}</span>
-                                )}
+                                )} */}
                                 <div className='register_bottom'>
                                     <Link to={'/login'}>HAVE YOU <br /> ACCOUNT?</Link>
                                     <button type='submit' variant="contained">Sign Up</button>

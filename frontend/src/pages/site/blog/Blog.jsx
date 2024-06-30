@@ -1,6 +1,8 @@
 import React from 'react'
 import "./Blog.css"
 import { Helmet } from 'react-helmet'
+import { Link } from "react-router-dom";
+
 
 
 const Blog = () => {
@@ -44,7 +46,11 @@ const Blog = () => {
                             <div class="card-body">
                                 <p class="card-text"><small class="text-muted">Admin</small></p>
                                 <p class="card-text"><small class="text-muted">Mar 22, 2023 • 2 min</small></p>
+                                <Link to={"/blogDetail"} >
                                 <h5 class="card-title">Don’t Be Afraid of the Scale!</h5>
+                                
+                                </Link>
+                                {/* <h5 class="card-title">Don’t Be Afraid of the Scale!</h5> */}
                                 <p class="card-text">Create a blog post subtitle that summarizes your post in a few short, punchy sentences and...</p>
                                 <div className='blog_xett'></div>
                                 <p class="card-text"><small class="text-muted">0 comments</small> <span class="float-right"><i class="fa-regular fa-heart"></i> 1</span></p>

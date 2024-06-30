@@ -7,7 +7,7 @@ import MainContext from '../../../context/context'
 import { Link } from "react-router-dom";
 
 const Price = () => {
-    const { data, setData, basket, setBasket } = useContext(MainContext)
+    const { data, setData, basket, setBasket, wishlist, setWishlist } = useContext(MainContext)
     const [search, setSearch] = useState("");
     const [sortBy, setSortBy] = useState(null);
 
@@ -30,9 +30,8 @@ const Price = () => {
         setBasket([...basket]);
         console.log(basket);
         localStorage.setItem("basketForDiplomWork", JSON.stringify(basket));
-
     }
-
+  
     return (
         <div>
             <Helmet>
@@ -55,7 +54,7 @@ const Price = () => {
             <div className='button_sira'>
                 <input type='text' placeholder='Search Here' value={search} onChange={(e) => setSearch(e.target.value)} />
                 <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter </a>
+                    <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter </a>
                     <div className="dropdown-menu " aria-labelledby="navbarDropdown">
                         <button id='button_filter' onClick={() => setSortBy({ field: "title", asc: true })}>A-Z</button>
                         <button id='button_filter' onClick={() => setSortBy({ field: "title", asc: false })}>Z-A</button>
@@ -82,11 +81,15 @@ const Price = () => {
                                         data-aos-easing="linear"
                                         data-aos-duration="1500" key={index}>
                                         <div className="pricing-card basic">
+                                            <button style={{ color: "black" }} id='wishlist_add_btn'  >
+                                                <i class="fa-solid fa-heart"></i>
+                                            </button>
                                             <div className="card-content">
                                                 <h2>{item.title}</h2>
                                                 <p className="price">${item.price}</p>
                                                 <p>{item.description}</p>
                                                 <button onClick={() => { addToBasket(item._id) }} >Select</button>
+
                                                 <ul>
                                                     <li>{item.haqqinda}</li>
                                                     <li>{item.haqqindaki}</li>

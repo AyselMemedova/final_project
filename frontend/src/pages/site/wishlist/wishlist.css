@@ -1,0 +1,32 @@
+
+
+.wishlist_text{
+    font-size: 20px;
+    font-family: "Montserrat";
+    color: #6d7c76;
+
+}
+.wishlist_head{
+    font-family: "Caudex";
+    font-size: 22px;
+
+}
+#wishlist_button_buy:hover{
+border: none;
+}
+
+.wishlis_all{
+
+    padding: 50px 120px;
+    /* margin-bottom: 100px;
+    margin-top: 20px; */
+
+}
+
+.wishlis_all_h1{
+text-align: center;
+margin-bottom: 30px;
+font-size: 50px;
+color: rgb(29, 59, 42);
+font-family: "Caudex";
+}

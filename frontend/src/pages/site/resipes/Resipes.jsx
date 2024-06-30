@@ -1,12 +1,13 @@
-import React, { useContext } from 'react';
+import React, { useContext ,useState} from 'react';
 import "./Resipes.css";
 import { Helmet } from 'react-helmet';
 import Toastify from 'toastify-js';
 import 'toastify-js/src/toastify.css';
 import MainContext from '../../../context/context';
 
-const Resipes = () => {
-  const { basket, setBasket } = useContext(MainContext);
+const Recipes = () => {
+  const { basket, setBasket, wishlist, setWishlist } = useContext(MainContext);
+  const [isInWishlist, setIsInWishlist] = useState(false); 
 
   const addToBasket = () => {
     const item = {
@@ -27,12 +28,47 @@ const Resipes = () => {
     }
 
     Toastify({
-      text: "Product added successfully",
+      text: "Product added to basket successfully",
       className: "info",
       style: {
         background: "linear-gradient(to right, #00b09b, #96c93d)",
       }
     }).showToast();
+  };
+
+  const addToWishlist = () => {
+    const newItem = {
+      _id: 'fresh-salad',
+      title: 'Fresh Salad',
+      description: 'A fresh and healthy salad with mixed greens and vegetables.',
+      price: 10,
+      img: 'https://images01.nicepagecdn.com/43/46/43461ef27e9c61bced952c39514365d4.jpeg'
+    };
+
+    const target = wishlist.find((x) => x._id === newItem._id);
+
+    if (target) {
+      const updatedWishlist = wishlist.filter((x) => x._id !== newItem._id);
+      setWishlist(updatedWishlist);
+      setIsInWishlist(false); // Item removed from wishlist
+      Toastify({
+        text: "Product removed from wishlist",
+        className: "info",
+        style: {
+          background: "linear-gradient(to right, #e27d5e, #ffafcc)",
+        }
+      }).showToast();
+    } else {
+      setWishlist([...wishlist, newItem]);
+      setIsInWishlist(true); // Item added to wishlist
+      Toastify({
+        text: "Product added to wishlist",
+        className: "info",
+        style: {
+          background: "linear-gradient(to right, #256b4f, #6d7c76)",
+        }
+      }).showToast();
+    }
   };
 
   return (
@@ -46,7 +82,10 @@ const Resipes = () => {
             <div className="col-6">
               <div className="recipes_text">
                 <h1>Fresh Salad</h1>
-                <p><h4>Ingridients:</h4></p>
+                <button id='recipes_add_btn' onClick={addToWishlist}>
+                  <i className={`fa-solid fa-heart ${isInWishlist ? 'wishlist-active' : ''}`}></i>
+                </button>
+                <p><h4>Ingredients:</h4></p>
                 <p>
                   <span>Base vegetables: </span>
                   Mixed greens, cucumber, tomatoes, bell pepper, carrot, red onion radishes, corn, avocado, olives, chickpeas, quinoa, feta cheese
@@ -74,4 +113,5 @@ const Resipes = () => {
   );
 }
 
-export default Resipes;
+export default Recipes;
+

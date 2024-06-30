@@ -19,6 +19,7 @@ import Register from "../pages/site/register/Register"
 import User from "../pages/site/user/User"
 import AddBlog from "../pages/site/addBlog/addBlog"
 import Product from "../pages/admin/product/Product"
+import Wishlist from "../pages/site/wishlist/wishlist"
 // import Addİmg from "../pages/admin/addİmg/addİmg"
 
 const ROUTES =[
@@ -82,6 +83,10 @@ const ROUTES =[
             {
                 path:"addBlog",
                 element:<AddBlog/>
+            },
+            {
+                path:"wishlist",
+                element:<Wishlist/>
             },
           
           

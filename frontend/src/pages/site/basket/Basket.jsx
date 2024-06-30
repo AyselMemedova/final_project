@@ -70,7 +70,7 @@ const Basket = () => {
         <section className="shopping-cart dark">
           <div className="container">
             <div className="block-heading">
-              <h2 style={{ color: "rgb(29, 59, 42)", fontSize: "50px" }}>Basket</h2>
+              <h2 style={{ color: "rgb(29, 59, 42)", fontSize: "50px", fontFamily:"Caudex" }}>Basket</h2>
             </div>
             <div className="content page_basket_bcki">
               <div className="row">
