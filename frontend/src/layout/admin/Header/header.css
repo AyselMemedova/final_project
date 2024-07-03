@@ -11,17 +11,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* position: sticky; */
-    padding: 30px;
-    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
-
+    width: 100%;
+    
+}
+.header-wrapper{
+    background-image: url("https://reservq.vercel.app/assets/faq-bg-7118ca12.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .header_logo {
     display: flex;
     align-items: center;
-
-    /* justify-content: space-between;  */
     span {
         margin-left: 15px;
         color: black;
@@ -85,7 +87,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        /* background-color: black; */
         width: 40px;
         height: 40px;
         border-radius: 50%;

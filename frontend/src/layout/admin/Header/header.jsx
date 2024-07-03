@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./header.css"
 const Header = () => {
     return (
-        <div>
+        <div className='header-wrapper'>
              <div className='header_all'>
                 <div className="container">
                     <div className="row all_header ">
@@ -27,7 +27,7 @@ const Header = () => {
                             <ul>
                                 <li> <Link to={"/admin/add"}>Add Product</Link></li>
                                 {/* <li> <Link to={"/admin/Addİmg"}>Add İmage</Link></li> */}
-                                <li ><Link to={"/admin/add_blog"}>Blog</Link></li>
+                                {/* <li ><Link to={"/admin/add_blog"}>Blog</Link></li> */}
                                 <li><Link to={"/admin/product"}>Product</Link></li>
                             </ul>
                             </div>

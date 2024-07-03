@@ -3,23 +3,27 @@ import React, { useContext } from 'react'
 import { Helmet } from 'react-helmet'
 import MainContext from '../../../context/context'
 import axios from "axios";
+import "./Product.css"
 
-const Product = () => {
-    const { data, setdata } = useContext(MainContext);
+
+const Dashboard = () => {
+    const { data, setData } = useContext(MainContext);
     function deleteMehsular(_id) {
         axios.delete(`http://localhost:8080/api/mehsular/${_id}`)
         const target = data.find((item) => item._id == _id);
         const targetOfIndex = data.indexOf(target);
         data.splice(targetOfIndex, 1)
-        setdata([...data])
-      }
+        setData([...data])
+    }
     return (
         <>
             <Helmet>
-                <title>Dashboard</title>
+                <title>Product</title>
             </Helmet>
-            <div>
-                <table class="table">
+            <div className='dashboard_all'> 
+                <h1 className='dashboard'>All Product</h1>
+                <div className='dashboard_table'>
+                <table class="table ">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -30,6 +34,7 @@ const Product = () => {
                             <th scope="col">Haqqindaki</th>
                             <th scope="col">Haqqindauc</th>
                             <th scope="col">Delete</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -42,16 +47,23 @@ const Product = () => {
                                 <td>{item.haqqinda}</td>
                                 <td>{item.haqqindaki}</td>
                                 <td>{item.haqqindauc}</td>
+                                {/* <td>{item._id}</td> */}
+                                
                                 <td><button onClick={() => {
+                                    console.log(item._id)
                                     deleteMehsular(item._id);
-                                }} className='btn btn-danger'>Delete</button></td>
+                                }} className='btn btn-danger' style={{margin:"0px"}}>Delete</button></td>
+                              
                             </tr>
                         ))}
+
                     </tbody>
                 </table>
+                </div>
+                
             </div>
         </>
     )
 }
 
-export default Product
+export default Dashboard

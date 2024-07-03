@@ -45,15 +45,28 @@ const mehsular_controller = {
             res.status(500).json({ message: error.message }); // Use res.status(500) for server error
         }
     },
+    // post: async (req, res) => {
+    //     try {
+    //         const newMehsular = new MehsularModel(req.body);
+    //         const resp = await MehsularModel.find({});
+    //         await newMehsular.save();
+    //         res.status(201).json({ message: "Item created successfully" }); // Use 201 Created status for successful creation
+    //     } catch (error) {
+    //         res.status(500).json({ message: "Internal server error" }); // Use res.status(500) for server error
+    //     }
+    // }
+
     post: async (req, res) => {
         try {
-            const newMehsular = new MehsularModel(req.body);
-            await newMehsular.save();
-            res.status(201).json({ message: "Item created successfully" }); // Use 201 Created status for successful creation
+            const newMehsular = new MehsularModel(req.body); // Yeni öğeyi oluştur
+            await newMehsular.save(); // Yeni öğeyi veritabanına kaydet
+            const allItems = await MehsularModel.find({}); // Tüm öğeleri al
+            res.status(201).json(allItems); // Tüm öğeleri geri döndür
         } catch (error) {
-            res.status(500).json({ message: "Internal server error" }); // Use res.status(500) for server error
+            res.status(500).json({ message: "Internal server error" }); // Hata durumunda 500 durumu ve mesajı döndür
         }
     }
+    
 };
 
 module.exports = mehsular_controller;

@@ -24,10 +24,16 @@
         color: rgb(29, 59, 42);
     }
 }
-
+.faq_all{
+    background-image: url("https://reservq.vercel.app/assets/faq-bg-7118ca12.png");
+    padding-top: 20px;
+    padding-left: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
 .main-content {
     font-family: "Caudex";
-
     padding: 2rem;
     max-width: 800px;
     margin: auto;

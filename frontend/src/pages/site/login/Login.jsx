@@ -35,7 +35,7 @@ const Login = () => {
       try {
         const response = await controller.post(endpoints.login, { email, password });
 
-        console.log("alpayaaaaaaa",response.token);
+        console.log("data",response.token);
         console.log('API Response:', response); 
         if ( response.token) {
           dispatch(login(response.user));

@@ -10,6 +10,7 @@ const Price = () => {
     const { data, setData, basket, setBasket, wishlist, setWishlist } = useContext(MainContext)
     const [search, setSearch] = useState("");
     const [sortBy, setSortBy] = useState(null);
+    const [isInWishlist, setIsInWishlist] = useState(false);
 
     function addToBasket(_id) {
         const target = basket.find((x) => x._id === _id);
@@ -31,9 +32,42 @@ const Price = () => {
         console.log(basket);
         localStorage.setItem("basketForDiplomWork", JSON.stringify(basket));
     }
+
+    const addToWishlist = (newItem) => {
+        const target = wishlist.find((x) => x._id === newItem._id);
+        console.log("test1")
+    
+        if (target) {
+        console.log("test2")
+
+          const updatedWishlist = wishlist.filter((x) => x._id !== newItem._id);
+          setWishlist(updatedWishlist);
+          setIsInWishlist(false); // Item removed from wishlist
+          Toastify({
+            text: "Product removed from wishlist",
+            className: "info",
+            style: {
+              background: "linear-gradient(to right, #e27d5e, #ffafcc)",
+            }
+          }).showToast();
+        } else {
+        console.log("test3")
+
+          setWishlist([...wishlist, newItem]);
+          setIsInWishlist(true); // Item added to wishlist
+          Toastify({
+            text: "Product added to wishlist",
+            className: "info",
+            style: {
+              background: "linear-gradient(to right, #256b4f, #6d7c76)",
+            }
+          }).showToast();
+        }
+      };
+    
   
     return (
-        <div>
+        <div className='price_all'>
             <Helmet>
                 <title>Price&Plans</title>
             </Helmet>
@@ -81,8 +115,13 @@ const Price = () => {
                                         data-aos-easing="linear"
                                         data-aos-duration="1500" key={index}>
                                         <div className="pricing-card basic">
-                                            <button style={{ color: "black" }} id='wishlist_add_btn'  >
-                                                <i class="fa-solid fa-heart"></i>
+                                            <button style={{ zIndex:"1000" }} id='wishlist_add_btn' onClick={()=>{
+                                                addToWishlist(item) 
+                                                console.log("first")
+
+                                            } } >
+                                                
+                                                <i  className="fa-solid fa-heart"></i>
                                             </button>
                                             <div className="card-content">
                                                 <h2>{item.title}</h2>

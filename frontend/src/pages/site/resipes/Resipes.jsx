@@ -50,7 +50,7 @@ const Recipes = () => {
     if (target) {
       const updatedWishlist = wishlist.filter((x) => x._id !== newItem._id);
       setWishlist(updatedWishlist);
-      setIsInWishlist(false); // Item removed from wishlist
+      setIsInWishlist(false); 
       Toastify({
         text: "Product removed from wishlist",
         className: "info",
@@ -60,7 +60,7 @@ const Recipes = () => {
       }).showToast();
     } else {
       setWishlist([...wishlist, newItem]);
-      setIsInWishlist(true); // Item added to wishlist
+      setIsInWishlist(true); 
       Toastify({
         text: "Product added to wishlist",
         className: "info",

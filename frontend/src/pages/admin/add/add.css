@@ -24,3 +24,18 @@ font-size: 20px;
     width: 550px;
     background-color:  rgb(29, 59, 42);
 }
+.add_all_head{
+    color: rgb(29, 59, 42);
+
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.add_all{
+    background-image: url("https://reservq.vercel.app/assets/faq-bg-7118ca12.png");
+    /* padding-top: 20px;
+    padding-left: 50px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

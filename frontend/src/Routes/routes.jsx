@@ -17,107 +17,102 @@ import BlogDetail from "../pages/site/blogDetail/blogDetail"
 import Login from "../pages/site/login/Login"
 import Register from "../pages/site/register/Register"
 import User from "../pages/site/user/User"
-import AddBlog from "../pages/site/addBlog/addBlog"
+import AddBlog from "../pages/admin/addBlog/addBlog"
 import Product from "../pages/admin/product/Product"
 import Wishlist from "../pages/site/wishlist/wishlist"
-// import Addİmg from "../pages/admin/addİmg/addİmg"
 
-const ROUTES =[
+const ROUTES = [
     {
-        path:"/",
-        element:<SiteRoot/>,
-        children:[
+        path: "/",
+        element: <SiteRoot />,
+        children: [
             {
-                path:"",
-                element:<Home/>
+                path: "",
+                element: <Home />
             },
             {
-                path:"about",
-                element:<About/>
+                path: "about",
+                element: <About />
             },
             {
-                path:"galery",
-                element:<Galery/>
+                path: "galery",
+                element: <Galery />
             },
             {
-                path:"resipes",
-                element:<Resipes/>
+                path: "resipes",
+                element: <Resipes />
             },
             {
-                path:"contact",
-                element:<Contact/>
+                path: "contact",
+                element: <Contact />
             },
             {
-                path:"price&plan",
-                element:<Price/>
+                path: "price&plan",
+                element: <Price />
             },
             {
-                path:"blog",
-                element:<Blog/>
+                path: "blog",
+                element: <Blog />
             },
             {
-                path:"faq",
-                element:<Faq/>
+                path: "faq",
+                element: <Faq />
             },
-           
+
             {
-                path:"basket",
-                element:<Basket/>
-            },
-            {
-                path:"blog/:id",
-                element:<BlogDetail/>
+                path: "basket",
+                element: <Basket />
             },
             {
-                path:"login",
-                element:<Login/>
+                path: "blogDetail",
+                element: <BlogDetail />
             },
             {
-                path:"register",
-                element:<Register/>
+                path: "login",
+                element: <Login />
             },
             {
-                path:"user",
-                element:<User/>
+                path: "register",
+                element: <Register />
             },
             {
-                path:"addBlog",
-                element:<AddBlog/>
+                path: "user",
+                element: <User />
             },
             {
-                path:"wishlist",
-                element:<Wishlist/>
+                path: "wishlist",
+                element: <Wishlist />
             },
-          
-          
+
+
         ]
     },
     {
-        path:"/admin",
-        element: <AdminRoot/>,
-        children:[
+        path: "/admin",
+        element: <AdminRoot />,
+        children: [
             {
-                path:"",
-                element:<Dashboard/>
+                path: "",
+                element: <Dashboard />
             },
             {
-                path:"add",
-                element:<Add/>
+                path: "add",
+                element: <Add />
             },
-            // {
-            //     path:"Addİmg",
-            //     element:<Addİmg/>
-            // },
             {
-                path:"product",
-                element:<Product/>
+                path: "product",
+                element: <Product />
+            },
+            {
+                path: "addBlog",
+                element: <AddBlog />
             }
         ]
     }
-    ,    {
-        path:"*",
-        element:<Error/>,
-        
+    , {
+        path: "*",
+        element: <Error />,
+
     },
 ]
 export default ROUTES;

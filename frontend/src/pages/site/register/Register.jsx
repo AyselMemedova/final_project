@@ -14,7 +14,6 @@ import controller from '../../../services/api/request';
 import "./Register.css";
 import { Helmet } from "react-helmet";
 
-
 const Register = () => {
     const navigate = useNavigate();
 
@@ -25,15 +24,14 @@ const Register = () => {
             password: "",
             repeat_password: "",
             role: "",
-            // src: "",
         },
         validationSchema: userValidation,
         onSubmit: async (values, actions) => {
             console.log("Form values on submit:", values);
 
             try {
-                const { username, email, password, src, role } = values;
-                const newUser = new User(username, email, password, src, role);
+                const { username, email, password, role } = values;
+                const newUser = new User(username, email, password, role);
 
                 console.log("New user object:", newUser);
 
@@ -67,18 +65,15 @@ const Register = () => {
 
     return (
         <div className='register_headr'>
-              <Helmet>
-        <title>Register</title>
-      </Helmet>
+            <Helmet>
+                <title>Register</title>
+            </Helmet>
             <h1 className='register_h1'>Register</h1>
             <div className='register_all'>
                 <div className="container">
                     <div className="row">
                         <div className="col-6 register_hissesi">
-                            <form onSubmit={(e) => {
-                                e.preventDefault();
-                                formik.handleSubmit(e);
-                            }}
+                            <form onSubmit={formik.handleSubmit}
                                 className='form_register' style={{
                                     backgroundColor: "#ffffffa9",
                                     display: "flex",
@@ -128,7 +123,7 @@ const Register = () => {
                                     <span style={{ color: "red" }}>{formik.errors.repeat_password}</span>
                                 )}
 
-                                {/* <FormControl fullWidth>
+                                <FormControl fullWidth>
                                     <InputLabel id="role-label">Role</InputLabel>
                                     <Select
                                         value={formik.values.role}
@@ -145,7 +140,7 @@ const Register = () => {
                                 </FormControl>
                                 {formik.touched.role && formik.errors.role && (
                                     <span style={{ color: "red" }}>{formik.errors.role}</span>
-                                )} */}
+                                )}
                                 <div className='register_bottom'>
                                     <Link to={'/login'}>HAVE YOU <br /> ACCOUNT?</Link>
                                     <button type='submit' variant="contained">Sign Up</button>
@@ -164,4 +159,3 @@ const Register = () => {
 };
 
 export default Register;
-

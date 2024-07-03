@@ -11,12 +11,10 @@ import { Button } from "@mui/material";
 import Blog from "../../../classes/Blog";
 import Swal from "sweetalert2";
 import blogValidation from "../../../validations/blogValidation";
-// import Cookies from "js-cookie";
 
 const AddBlog = () => {
     const user = useSelector((state) => state.user);
     const [tags, setTags] = useState([]);
-    // const token = Cookies.get('token');
     const navigate = useNavigate();
     useEffect(() => {
       if (user.role != "journalist") {

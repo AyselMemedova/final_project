@@ -1,13 +1,3 @@
-// import * as Yup from "yup";
-
-// const loginValidation = Yup.object().shape({
-//   password: Yup.string()
-//     .matches 
-//     .required(),
-//   email: Yup.string().email().required(),
-// });
-
-// export default loginValidation;
 
 import * as Yup from "yup";
 
